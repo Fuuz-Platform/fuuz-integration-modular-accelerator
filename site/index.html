@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fuuz Integration Orchestrator (modular) — Fuuz Accelerator</title>
+<meta name="description" content="The orchestrator that moves data between Fuuz and external systems — cross-tenant and external connections, published as readable components.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://accelerators.fuuz.com/fuuz-integration-modular-accelerator/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://accelerators.fuuz.com/fuuz-integration-modular-accelerator/">
+<meta property="og:site_name" content="Fuuz Accelerators">
+<meta property="og:title" content="Fuuz Integration Orchestrator (modular) — Fuuz Accelerator">
+<meta property="og:description" content="The orchestrator that moves data between Fuuz and external systems — cross-tenant and external connections, published as readable components.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/appicon-violet.svg">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "Fuuz Integration Orchestrator (modular)",
+  "url": "https://accelerators.fuuz.com/fuuz-integration-modular-accelerator/",
+  "description": "The orchestrator that moves data between Fuuz and external systems \u2014 cross-tenant and external connections, published as readable components.",
+  "codeRepository": "https://github.com/Fuuz-Platform/fuuz-integration-modular-accelerator",
+  "applicationCategory": "BusinessApplication",
+  "runtimePlatform": "Fuuz",
+  "keywords": "Fuuz, accelerator, manufacturing, Integration Orchestrator",
+  "author": {
+    "@type": "Organization",
+    "name": "Fuuz",
+    "url": "https://fuuz.com"
+  }
+}
+</script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="../"><img src="assets/logo-horizontal-on-midnight.svg" alt="Fuuz"></a>
+    <span class="section">Accelerators</span>
+    <nav>
+      <a href="#what">What it does</a>
+      <a href="#modules">Modules</a>
+      <a href="#docs">Documentation</a>
+      <a href="https://github.com/Fuuz-Platform/fuuz-integration-modular-accelerator">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap hero">
+  <p class="eyebrow">Accelerator &middot; Installs into a tenant</p>
+  <h1>The Connection Layer, Made <span class="accent">Legible</span></h1>
+  <p class="lede">The Integration Orchestrator is how a Fuuz tenant talks to what is around it — other tenants, an ERP, a host MES. It is deliberately small: six data models and four flows that give every other accelerator somewhere to send data, rather than each one growing its own integration.</p>
+  <div class="ctas">
+    <a class="cta cta-primary" href="#modules">See the modules</a>
+    <a class="cta cta-secondary" href="https://github.com/Fuuz-Platform/fuuz-integration-modular-accelerator">Read the source</a>
+  </div>
+  <div class="chips"><span class="chip">6 data models</span><span class="chip">4 data flows</span><span class="chip">5 screens</span><span class="chip">1 module</span></div>
+</div>
+
+<section id="what">
+  <div class="wrap">
+    <p class="sec-eyebrow">What it does</p>
+    <h2>Small On Purpose, Shared By <span class="accent">Everything</span></h2>
+    <p class="sec-lede">One module, and the reason the MES and WMS accelerators do not each carry their own connection code.</p>
+    <div class="grid"><div class="card"><h3>Cross-tenant movement</h3><p>Move records between Fuuz tenants without either side needing bespoke flows.</p><div class="meta">integration</div></div><div class="card"><h3>External systems</h3><p>The touchpoint for an ERP, a host MES or a CMMS — configured rather than coded per connection.</p><div class="meta">integration</div></div><div class="card"><h3>Shared by the accelerators</h3><p>MES ships MES_WMS and MES_CMMS_Request flows that assume this orchestrator is where connections are built out.</p><div class="meta">integration</div></div><div class="card"><h3>Readable by design</h3><p>Nine components in total. Small enough that the whole integration surface can be read in a sitting.</p><div class="meta">9 components</div></div></div>
+  </div>
+</section>
+
+<section id="modules">
+  <div class="wrap">
+    <p class="sec-eyebrow">Modules</p>
+    <h2>Published As Components, Not A <span class="accent">Blob</span></h2>
+    <p class="sec-lede">A <code>.fuuz</code> package is a single archive. This publication unpacks it
+      into one directory per module, so a change to a flow reads as a change to a flow.</p>
+    <div class="metrics"><div class="metric"><span class="n">6</span><span class="l">Data models</span></div><div class="metric"><span class="n">4</span><span class="l">Data flows</span></div><div class="metric"><span class="n">5</span><span class="l">Screens</span></div><div class="metric"><span class="n">1</span><span class="l">Module</span></div></div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Module</th><th>Components</th><th>Contains</th></tr></thead>
+        <tbody><tr><td><code>integration</code><br><span class="meta">Integration</span></td><td>9</td><td>4 dataFlows &middot; 5 screens</td></tr></tbody>
+      </table>
+    </div>
+    <div class="callout">
+      <h3>Why some components sit outside <code>modules/</code></h3>
+      <p>Only data flows and screens carry a module in the package. Data models, document designs
+        and seed data carry none, so they are filed by type at the repository root rather than
+        assigned to a module on a guess.</p>
+    </div>
+  </div>
+</section>
+
+<section id="docs">
+  <div class="wrap">
+    <p class="sec-eyebrow">Documentation</p>
+    <h2>Read It Before You <span class="accent">Install</span></h2>
+    <p class="sec-lede">Shipped with the accelerator, converted to markdown in the repository.</p>
+    <div class="resources">
+      <a class="resource" href="https://github.com/Fuuz-Platform/fuuz-integration-modular-accelerator/blob/main/docs/technical-overview.md">
+        <h3>Technical Overview</h3><p>What it is and is not, the core design, and what ships — at a glance.</p></a>
+      <a class="resource" href="https://github.com/Fuuz-Platform/fuuz-integration-modular-accelerator/blob/main/docs/setup-and-configuration.md">
+        <h3>Setup &amp; Configuration Guide</h3><p>Step-by-step configuration in a tenant where the package is installed.</p></a>
+      <a class="resource" href="https://github.com/Fuuz-Platform/fuuz-integration-modular-accelerator/blob/main/docs/as-is-build-reference.md">
+        <h3>AS IS Build Reference</h3><p>Architecture, functional-area map and the flow pattern the package follows.</p></a>
+      <a class="resource" href="https://github.com/Fuuz-Platform/fuuz-integration-modular-accelerator/tree/main/modules">
+        <h3>The modules</h3><p>Every flow, screen and model as committed JSON — the reference that cannot go stale.</p></a>
+    </div>
+    <div class="callout">
+      <h3>Where connections belong</h3>
+      <p>MES and WMS ship <em>touchpoints</em> — packaged flows that hand off to an adjacent accelerator. Building the connection itself out to an external system is this orchestrator's job, which is why the touchpoint flows are thin.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Fuuz&reg; is an Enterprise Industrial Intelligence Platform.
+      <a href="https://accelerators.fuuz.com/">All accelerators</a> &middot;
+      <a href="https://github.com/Fuuz-Platform/fuuz-integration-modular-accelerator">Source</a> &middot;
+      <a href="https://fuuz.com">fuuz.com</a></p>
+  </div>
+</footer>
+</body>
+</html>
