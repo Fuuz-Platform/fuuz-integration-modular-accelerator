@@ -1,0 +1,650 @@
+{
+  "header": {
+    "id": "integrationConfiguration",
+    "name": "IntegrationConfiguration",
+    "description": "Defines a single inbound or outbound integration endpoint, including the data flows used to process the payload and the response, and incremental-extraction state.",
+    "dataModelKindId": "reference",
+    "_customFields": {
+      "_externalId": null
+    }
+  },
+  "version": {
+    "id": "cmqou9pq604vg017s06pu0u56",
+    "number": "9",
+    "dataModelId": "integrationConfiguration",
+    "modelDefinition": {
+      "name": "IntegrationConfiguration",
+      "metadata": {
+        "mfgx": {
+          "module": {
+            "id": "integration",
+            "group": {
+              "id": "system"
+            }
+          },
+          "exposed": true,
+          "mutable": true,
+          "mutations": {
+            "create": true,
+            "update": true,
+            "del": true
+          },
+          "dataChangeCapture": {
+            "exposed": true,
+            "retentionDays": 120
+          },
+          "customFields": {
+            "exposed": true
+          },
+          "editor": {
+            "autosort": false
+          },
+          "triggers": {
+            "create": "$merge(\n  [\n    $,\n    {\n      \"id\": $after.name\n    }\n  ]\n)"
+          }
+        },
+        "mongo": {
+          "collection": "integrationConfiguration"
+        },
+        "graphql": {
+          "type": "Object"
+        }
+      },
+      "kind": "Reference",
+      "fields": [
+        {
+          "name": "id",
+          "type": "ID!",
+          "description": "The primary unique ID of the record.  Every model should have an id field.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": false
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": true
+          }
+        },
+        {
+          "name": "name",
+          "type": "String!",
+          "description": "Name of   the integration configuration.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": false
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": true
+          }
+        },
+        {
+          "name": "active",
+          "type": "Boolean!",
+          "description": "Whether this configuration is currently enabled and eligible to run.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "isInbound",
+          "type": "Boolean!",
+          "description": "Direction flag: true when data flows inbound (into Fuuz), false when outbound (Fuuz to external system).",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "integrationTypeId",
+          "type": "ID!",
+          "description": "",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "requestHandlerDataFlowId",
+          "type": "ID",
+          "description": "Configure which flow main handler has to use for processing integration data flow and response data flow",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "integrationDataFlowId",
+          "type": "ID!",
+          "description": "The DataFlow that processes the integration payload.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "responseDataFlowId",
+          "type": "ID!",
+          "description": "",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "autoRetryResponses",
+          "type": "JSON",
+          "description": "JSON configuration describing which response conditions should trigger an automatic retry.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "integrationType",
+          "description": "",
+          "type": "IntegrationType!",
+          "metadata": {
+            "mfgx": {
+              "relation": {
+                "fields": {
+                  "from": "integrationTypeId",
+                  "to": "id"
+                }
+              },
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "requestHandlerDataFlow",
+          "description": "",
+          "type": "DataFlow",
+          "metadata": {
+            "mfgx": {
+              "relation": {
+                "fields": {
+                  "from": "requestHandlerDataFlowId",
+                  "to": "id"
+                }
+              },
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "integrationDataFlow",
+          "description": "",
+          "type": "DataFlow!",
+          "metadata": {
+            "mfgx": {
+              "relation": {
+                "fields": {
+                  "from": "integrationDataFlowId",
+                  "to": "id"
+                }
+              },
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "responseDataFlow",
+          "description": "",
+          "type": "DataFlow!",
+          "metadata": {
+            "mfgx": {
+              "relation": {
+                "fields": {
+                  "from": "responseDataFlowId",
+                  "to": "id"
+                }
+              },
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "lastTransactionAt",
+          "type": "DateTime",
+          "description": "Timestamp of the most recent transaction processed by this configuration.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "latestRecordId",
+          "type": "String",
+          "description": "External reference/cursor of the most recently processed record, used to drive   incremental (delta) extraction.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "savedScriptId",
+          "type": "String",
+          "description": "Identifier of a saved script associated with this configuration.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "maxRetryAttemps",
+          "type": "Int",
+          "description": "Maximum number of times a failed record under this configuration is automatically retried before it stops being reprocessed and is left in a errored state.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "maxRecords",
+          "type": "Int",
+          "description": "Configure the maximum number of records extracted in one request",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "parameters",
+          "type": "JSON!",
+          "description": "JSON parameters/settings that drive this configuration's behavior.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              },
+              "defaultExpression": "{}"
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "scopedDataModelId",
+          "type": "ID",
+          "description": "The DataModel scoped to the FUUZ Apps integration.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "scopedDataModel",
+          "description": "",
+          "type": "DataModel",
+          "metadata": {
+            "mfgx": {
+              "relation": {
+                "deletionReferenceBehavior": "prevent",
+                "fields": {
+                  "from": "scopedDataModelId",
+                  "to": "id"
+                }
+              },
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "integrationStagings",
+          "description": "",
+          "type": "[IntegrationStaging!]!",
+          "metadata": {
+            "mfgx": {
+              "relation": {
+                "fields": {
+                  "from": "id",
+                  "to": "integrationConfigId"
+                }
+              },
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        }
+      ],
+      "description": "Defines a single inbound or outbound integration endpoint, including the data flows used to process the payload and the response, and incremental-extraction state."
+    },
+    "dataModelTypeId": "setup"
+  },
+  "migration": "$",
+  "migrations": [
+    {
+      "dataModelVersionId": "cmqou9pq604vg017s06pu0u56",
+      "dataModelVersion": {
+        "number": "9"
+      },
+      "mappingExpression": "$"
+    },
+    {
+      "dataModelVersionId": "cmq9dp8e1067r017eahpbeat1",
+      "dataModelVersion": {
+        "number": "8"
+      },
+      "mappingExpression": "$"
+    },
+    {
+      "dataModelVersionId": "cmeb39s5q1da701592p072jw7",
+      "dataModelVersion": {
+        "number": "7"
+      },
+      "mappingExpression": "$"
+    }
+  ]
+}

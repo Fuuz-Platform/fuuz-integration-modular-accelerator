@@ -1,0 +1,570 @@
+{
+  "packageDefinition": {
+    "name": "Integration Orchestrator"
+  },
+  "packageDefinitionVersion": {
+    "id": "cmrtbe2fc00o23b6p6dzwnxzq",
+    "version": "0.0.9",
+    "packageDefinitionId": "integrationOrchestrator",
+    "exportedFileId": null
+  },
+  "packageDefinitionSelections": [
+    {
+      "id": "cmrtbe3bd00o33b6p934o0kaw",
+      "api": "application",
+      "modelName": "DataModel",
+      "selected": [
+        {
+          "id": "integrationConfiguration",
+          "label": "IntegrationConfiguration"
+        },
+        {
+          "id": "integrationMessage",
+          "label": "IntegrationMessage"
+        },
+        {
+          "id": "integrationMessageType",
+          "label": "IntegrationMessageType"
+        },
+        {
+          "id": "integrationStaging",
+          "label": "IntegrationStaging"
+        },
+        {
+          "id": "integrationType",
+          "label": "IntegrationType"
+        },
+        {
+          "id": "stagingTableStatus",
+          "label": "StagingTableStatus"
+        }
+      ],
+      "fields": [
+        {
+          "name": "id"
+        },
+        {
+          "name": "name"
+        },
+        {
+          "name": "description"
+        },
+        {
+          "name": "dataModelKindId"
+        },
+        {
+          "name": "_customFields._externalId"
+        }
+      ],
+      "metadata": {
+        "dataTransform": "$",
+        "viewFields": [
+          {
+            "id": "id",
+            "label": "id"
+          },
+          {
+            "id": "name",
+            "label": "name"
+          }
+        ],
+        "labelField": "name"
+      },
+      "packageDefinitionVersionId": "cmrtbe2fc00o23b6p6dzwnxzq"
+    },
+    {
+      "id": "cmrtbe3bd00o43b6p56jznhlt",
+      "api": "application",
+      "modelName": "DataFlow",
+      "selected": [
+        {
+          "id": "integrationMainHandler",
+          "label": "Integration: Main Handler"
+        },
+        {
+          "id": "integrationMainFlowRequestHandler",
+          "label": "Integration: Main Flow Request Handler"
+        },
+        {
+          "id": "intOutboundAppTenantRequestHandler",
+          "label": "Int_Outbound App Tenant Request Handler"
+        },
+        {
+          "id": "integrationOrchestratorDashboard",
+          "label": "Integration Orchestrator Dashboard"
+        }
+      ],
+      "fields": [
+        {
+          "name": "id"
+        },
+        {
+          "name": "name"
+        },
+        {
+          "name": "description"
+        },
+        {
+          "name": "active"
+        },
+        {
+          "name": "substitutesDataFlowId"
+        },
+        {
+          "name": "dataFlowTypeId"
+        },
+        {
+          "name": "logLevelId"
+        },
+        {
+          "name": "mcpToolConfiguration.enabled"
+        },
+        {
+          "name": "mcpToolConfiguration.inputSchema"
+        },
+        {
+          "name": "mcpToolConfiguration.outputSchema"
+        },
+        {
+          "name": "mcpToolConfiguration.readOnly"
+        },
+        {
+          "name": "mcpToolConfiguration.destructive"
+        },
+        {
+          "name": "mcpToolConfiguration.idempotent"
+        },
+        {
+          "name": "moduleId"
+        },
+        {
+          "name": "_customFields._externalId"
+        }
+      ],
+      "metadata": {
+        "dataTransform": "$",
+        "viewFields": [
+          {
+            "id": "id",
+            "label": "id"
+          },
+          {
+            "id": "name",
+            "label": "name"
+          }
+        ],
+        "labelField": "name"
+      },
+      "packageDefinitionVersionId": "cmrtbe2fc00o23b6p6dzwnxzq"
+    },
+    {
+      "id": "cmrtbe3bd00o53b6pi9xxgr9u",
+      "api": "application",
+      "modelName": "Screen",
+      "selected": [
+        {
+          "id": "integrationSetup",
+          "label": "Integration Setup"
+        },
+        {
+          "id": "integrationTransactions",
+          "label": "Integration Transactions"
+        },
+        {
+          "id": "manageIntegrationConfiguration",
+          "label": "Manage Integration Configuration"
+        },
+        {
+          "id": "manageIntegrationType",
+          "label": "Manage Integration Type "
+        },
+        {
+          "id": "integrationDashboard",
+          "label": "Integration Dashboard"
+        }
+      ],
+      "fields": [
+        {
+          "name": "id"
+        },
+        {
+          "name": "name"
+        },
+        {
+          "name": "description"
+        },
+        {
+          "name": "active"
+        },
+        {
+          "name": "moduleId"
+        },
+        {
+          "name": "substitutesScreenId"
+        },
+        {
+          "name": "isWidget"
+        },
+        {
+          "name": "_customFields._externalId"
+        }
+      ],
+      "metadata": {
+        "dataTransform": "$",
+        "viewFields": [
+          {
+            "id": "id",
+            "label": "id"
+          },
+          {
+            "id": "name",
+            "label": "name"
+          }
+        ],
+        "labelField": "name"
+      },
+      "packageDefinitionVersionId": "cmrtbe2fc00o23b6p6dzwnxzq"
+    },
+    {
+      "id": "cmrtbe3bd00o63b6pbg843r4u",
+      "api": "application",
+      "modelName": "Topic",
+      "selected": [
+        {
+          "id": "cmdh1fxiq0wyu01828l7b7fln",
+          "label": "cmdh1fxiq0wyu01828l7b7fln"
+        },
+        {
+          "id": "cmdh4atgj120d01826en3b1fh",
+          "label": "cmdh4atgj120d01826en3b1fh"
+        },
+        {
+          "id": "cmf0pzo648g9r019k90rz2xas",
+          "label": "cmf0pzo648g9r019k90rz2xas"
+        },
+        {
+          "id": "cmf1axwy18vi7019kfztw8h5e",
+          "label": "cmf1axwy18vi7019kfztw8h5e"
+        }
+      ],
+      "fields": [
+        {
+          "name": "id"
+        },
+        {
+          "name": "name"
+        },
+        {
+          "name": "description"
+        },
+        {
+          "name": "valueSchema"
+        },
+        {
+          "name": "webhookAccessible"
+        },
+        {
+          "name": "_customFields._externalId"
+        }
+      ],
+      "metadata": {
+        "dataTransform": "$",
+        "viewFields": [
+          {
+            "id": "id",
+            "label": "id"
+          },
+          {
+            "id": "name",
+            "label": "name"
+          }
+        ],
+        "labelField": "id"
+      },
+      "packageDefinitionVersionId": "cmrtbe2fc00o23b6p6dzwnxzq"
+    },
+    {
+      "id": "cmrtbe3bd00o73b6ppxppiqau",
+      "api": "application",
+      "modelName": "StagingTableStatus",
+      "selected": [
+        {
+          "id": "Cannot Process",
+          "label": "Cannot Process"
+        },
+        {
+          "id": "Error",
+          "label": "Error"
+        },
+        {
+          "id": "Hold",
+          "label": "Hold"
+        },
+        {
+          "id": "Inprocess",
+          "label": "Inprocess"
+        },
+        {
+          "id": "Integration Error",
+          "label": "Integration Error"
+        },
+        {
+          "id": "New",
+          "label": "New"
+        },
+        {
+          "id": "Processed",
+          "label": "Processed"
+        },
+        {
+          "id": "Processing Error",
+          "label": "Processing Error"
+        },
+        {
+          "id": "Queued",
+          "label": "Queued"
+        },
+        {
+          "id": "Success",
+          "label": "Success"
+        }
+      ],
+      "fields": [
+        {
+          "name": "id"
+        },
+        {
+          "name": "name"
+        },
+        {
+          "name": "new"
+        },
+        {
+          "name": "inProcess"
+        },
+        {
+          "name": "processed"
+        },
+        {
+          "name": "success"
+        },
+        {
+          "name": "failure"
+        },
+        {
+          "name": "autoRetry"
+        },
+        {
+          "name": "color"
+        },
+        {
+          "name": "_customFields._externalId"
+        }
+      ],
+      "metadata": {
+        "dataTransform": "$",
+        "viewFields": [
+          {
+            "id": "id",
+            "label": "id"
+          },
+          {
+            "id": "name",
+            "label": "name"
+          }
+        ],
+        "labelField": "name"
+      },
+      "packageDefinitionVersionId": "cmrtbe2fc00o23b6p6dzwnxzq"
+    },
+    {
+      "id": "cmrtbe3bd00o83b6pagyu55bm",
+      "api": "application",
+      "modelName": "IntegrationMessageType",
+      "selected": [
+        {
+          "id": "Detail",
+          "label": "Detail"
+        },
+        {
+          "id": "Failure",
+          "label": "Failure"
+        },
+        {
+          "id": "Informational",
+          "label": "Informational"
+        },
+        {
+          "id": "Success",
+          "label": "Success"
+        },
+        {
+          "id": "Warning",
+          "label": "Warning"
+        }
+      ],
+      "fields": [
+        {
+          "name": "id"
+        },
+        {
+          "name": "name"
+        },
+        {
+          "name": "order"
+        },
+        {
+          "name": "fail"
+        },
+        {
+          "name": "informational"
+        },
+        {
+          "name": "success"
+        },
+        {
+          "name": "system"
+        },
+        {
+          "name": "usable"
+        },
+        {
+          "name": "color"
+        },
+        {
+          "name": "customData"
+        },
+        {
+          "name": "_customFields._externalId"
+        }
+      ],
+      "metadata": {
+        "dataTransform": "$",
+        "viewFields": [
+          {
+            "id": "id",
+            "label": "id"
+          }
+        ],
+        "labelField": "id"
+      },
+      "packageDefinitionVersionId": "cmrtbe2fc00o23b6p6dzwnxzq"
+    },
+    {
+      "id": "cmrtbe3bd00o93b6pro8lbt61",
+      "api": "application",
+      "modelName": "Module",
+      "selected": [
+        {
+          "id": "integration",
+          "label": "Integration"
+        }
+      ],
+      "fields": [
+        {
+          "name": "id"
+        },
+        {
+          "name": "name"
+        },
+        {
+          "name": "description"
+        },
+        {
+          "name": "moduleGroupId"
+        },
+        {
+          "name": "_customFields._externalId"
+        }
+      ],
+      "metadata": {
+        "labelField": "name"
+      },
+      "packageDefinitionVersionId": "cmrtbe2fc00o23b6p6dzwnxzq"
+    },
+    {
+      "id": "cmrtbe3bd00oa3b6pgikdcf7w",
+      "api": "application",
+      "modelName": "Sequence",
+      "selected": [
+        {
+          "id": "integrationMessageNumber",
+          "label": "Integration Message Number"
+        },
+        {
+          "id": "integrationStagingNumber",
+          "label": "Integration Staging Number"
+        }
+      ],
+      "fields": [
+        {
+          "name": "id"
+        },
+        {
+          "name": "name"
+        },
+        {
+          "name": "type"
+        },
+        {
+          "name": "increment"
+        },
+        {
+          "name": "prefix"
+        },
+        {
+          "name": "suffix"
+        },
+        {
+          "name": "zeroPadding"
+        },
+        {
+          "name": "_customFields._externalId"
+        }
+      ],
+      "metadata": {
+        "labelField": "name",
+        "insertBefore": [
+          {
+            "modelName": "DataModel"
+          }
+        ]
+      },
+      "packageDefinitionVersionId": "cmrtbe2fc00o23b6p6dzwnxzq"
+    },
+    {
+      "id": "cmrtbe3bd00ob3b6poavxnf1o",
+      "api": "application",
+      "modelName": "ModuleGroup",
+      "selected": [
+        {
+          "id": "system",
+          "label": "System"
+        }
+      ],
+      "fields": [
+        {
+          "name": "id"
+        },
+        {
+          "name": "name"
+        },
+        {
+          "name": "icon"
+        },
+        {
+          "name": "description"
+        },
+        {
+          "name": "_customFields._externalId"
+        }
+      ],
+      "metadata": {
+        "dataTransform": "$",
+        "viewFields": [],
+        "labelField": "name"
+      },
+      "packageDefinitionVersionId": "cmrtbe2fc00o23b6p6dzwnxzq"
+    }
+  ]
+}

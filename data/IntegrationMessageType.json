@@ -1,0 +1,82 @@
+{
+  "api": "application",
+  "modelName": "IntegrationMessageType",
+  "payload": [
+    {
+      "id": "Detail",
+      "name": "Detail",
+      "order": 5,
+      "fail": false,
+      "informational": true,
+      "success": false,
+      "system": true,
+      "usable": true,
+      "color": "#cccccc",
+      "customData": null,
+      "_customFields": {
+        "_externalId": null
+      }
+    },
+    {
+      "id": "Failure",
+      "name": "Failure",
+      "order": 0,
+      "fail": true,
+      "informational": false,
+      "success": false,
+      "system": true,
+      "usable": true,
+      "color": "#ff5656",
+      "customData": null,
+      "_customFields": {
+        "_externalId": null
+      }
+    },
+    {
+      "id": "Informational",
+      "name": "Informational",
+      "order": 4,
+      "fail": false,
+      "informational": true,
+      "success": false,
+      "system": true,
+      "usable": true,
+      "color": "#43c5ff",
+      "customData": null,
+      "_customFields": {
+        "_externalId": null
+      }
+    },
+    {
+      "id": "Success",
+      "name": "Success",
+      "order": 3,
+      "fail": false,
+      "informational": false,
+      "success": true,
+      "system": true,
+      "usable": true,
+      "color": "#2be84f",
+      "customData": null,
+      "_customFields": {
+        "_externalId": null
+      }
+    },
+    {
+      "id": "Warning",
+      "name": "Warning",
+      "order": 1,
+      "fail": false,
+      "informational": true,
+      "success": false,
+      "system": true,
+      "usable": true,
+      "color": "#ffee00",
+      "customData": null,
+      "_customFields": {
+        "_externalId": null
+      }
+    }
+  ],
+  "metadata": {}
+}

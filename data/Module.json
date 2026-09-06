@@ -1,0 +1,16 @@
+{
+  "api": "application",
+  "modelName": "Module",
+  "payload": [
+    {
+      "id": "integration",
+      "name": "Integration",
+      "description": "Functionality around managing integrations, such as connections, integrations, and integration requests.",
+      "moduleGroupId": "system",
+      "_customFields": {
+        "_externalId": null
+      }
+    }
+  ],
+  "metadata": {}
+}

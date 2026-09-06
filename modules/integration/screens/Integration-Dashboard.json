@@ -1,0 +1,1800 @@
+{
+  "header": {
+    "id": "integrationDashboard",
+    "name": "Integration Dashboard",
+    "description": "- Integration orchestrator dashboard",
+    "active": true,
+    "moduleId": "integration",
+    "substitutesScreenId": null,
+    "isWidget": false,
+    "_customFields": {
+      "_externalId": null
+    }
+  },
+  "version": {
+    "id": "cmqv3bu5j04rr01bq508vatra",
+    "number": "0.0.2",
+    "description": "- Initial version",
+    "screenId": "integrationDashboard",
+    "design": {
+      "components": [
+        {
+          "name": "New Screen",
+          "tabTitle": "New Tab",
+          "type": "canvas",
+          "props": {
+            "design": {
+              "ROOT": {
+                "type": {
+                  "resolvedName": "Screen"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexDirection": "row",
+                  "flexWrap": false,
+                  "alignItems": "stretch",
+                  "justifyContent": "flex-start",
+                  "width": "auto",
+                  "height": "100%",
+                  "hidden": false,
+                  "flexGrow": true,
+                  "shadow": true,
+                  "borderRadius": 0,
+                  "flowsDelay": 0,
+                  "removeOuterMargin": true,
+                  "intervals": [
+                    {
+                      "interval": 5,
+                      "action": "(\n  $components.HeaderForm.fn.loadData();\n  $components.ErrorQueueForm.fn.loadData();\n  $components.ActivityForm.fn.loadData();\n  $components.ThroughPutForm.fn.loadData();\n)"
+                    },
+                    {
+                      "interval": 10,
+                      "action": "(\n  $components.TopologyForm.fn.loadData();\n  $components.ConnectorsForm.fn.loadData();\n)"
+                    }
+                  ],
+                  "background": "default",
+                  "data": {}
+                },
+                "displayName": "Screen",
+                "custom": {
+                  "elementName": "Screen",
+                  "elementCounts": {
+                    "Form": 11,
+                    "Container": 38,
+                    "Text": 10,
+                    "Webpage": 8,
+                    "Cards": 1,
+                    "Action": 6,
+                    "Icon": 1,
+                    "Button Group": 1
+                  }
+                },
+                "parent": null,
+                "hidden": false,
+                "nodes": [
+                  "FphSo2foJC",
+                  "UwcB4KtaH-"
+                ],
+                "linkedNodes": {}
+              },
+              "Q8xKJMLyur": {
+                "type": {
+                  "resolvedName": "Form"
+                },
+                "isCanvas": true,
+                "props": {
+                  "query": {
+                    "api": "Application",
+                    "query": null,
+                    "dataPath": "edges[0]",
+                    "dataTransform": {
+                      "transform": "$executeFlow(\"integrationOrchestratorDashboard\",{\"section\": \"header\", \"themeMode\": $metadata.settings.ThemeMode})",
+                      "remote": false
+                    },
+                    "dataSubscription": {
+                      "enabled": false
+                    },
+                    "autoLoad": true,
+                    "parameters": "{\n  \"filter\": {\n    \"id\": {\n      \"_eq\": id\n    }\n  },\n  \"first\": 1\n}",
+                    "fields": [
+                      "id"
+                    ],
+                    "disableDataChangeIndicator": false,
+                    "dataChangeIndicatorSize": "normal"
+                  },
+                  "blockNavigationWhenDirty": true,
+                  "enableConfirmOnDataChanged": false
+                },
+                "displayName": "Form",
+                "custom": {
+                  "elementName": "HeaderForm"
+                },
+                "parent": "u1b5-83YUX",
+                "hidden": false,
+                "nodes": [
+                  "ObQGO2egkJ"
+                ],
+                "linkedNodes": {}
+              },
+              "ObQGO2egkJ": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": true,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "auto",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": true,
+                  "borderRadius": 4,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {},
+                  "data": {}
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container1"
+                },
+                "parent": "Q8xKJMLyur",
+                "hidden": false,
+                "nodes": [
+                  "qbeRypIxrA"
+                ],
+                "linkedNodes": {}
+              },
+              "qbeRypIxrA": {
+                "type": {
+                  "resolvedName": "EmbeddedWebpage"
+                },
+                "isCanvas": true,
+                "props": {
+                  "url": {
+                    "__transform": "$components.HeaderForm.data.dashboardUri",
+                    "__dynamicFields": {
+                      "payload": null,
+                      "context": []
+                    },
+                    "__cacheKey": "",
+                    "__remote": false
+                  },
+                  "width": "100%",
+                  "height": "auto",
+                  "allowSameOrigin": true,
+                  "allowScripts": true,
+                  "allowPopups": true,
+                  "allowDownloads": true,
+                  "allowForms": true,
+                  "windowModals": true,
+                  "style": {}
+                },
+                "displayName": "Webpage",
+                "custom": {
+                  "elementName": "Webpage1"
+                },
+                "parent": "ObQGO2egkJ",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "XjwErRnuJP": {
+                "type": {
+                  "resolvedName": "Form"
+                },
+                "isCanvas": true,
+                "props": {
+                  "query": {
+                    "api": "Application",
+                    "query": null,
+                    "dataPath": "edges[0]",
+                    "dataTransform": {
+                      "transform": "$executeFlow(\"integrationOrchestratorDashboard\",{\"section\": \"topology\", \"themeMode\": $metadata.settings.ThemeMode})",
+                      "remote": false
+                    },
+                    "dataSubscription": {
+                      "enabled": false
+                    },
+                    "autoLoad": true,
+                    "parameters": "{\n  \"filter\": {\n    \"id\": {\n      \"_eq\": id\n    }\n  },\n  \"first\": 1\n}",
+                    "fields": [
+                      "id"
+                    ],
+                    "disableDataChangeIndicator": false,
+                    "dataChangeIndicatorSize": "normal"
+                  },
+                  "blockNavigationWhenDirty": true,
+                  "enableConfirmOnDataChanged": false
+                },
+                "displayName": "Form",
+                "custom": {
+                  "elementName": "TopologyForm"
+                },
+                "parent": "ngM9del6Ir",
+                "hidden": false,
+                "nodes": [
+                  "25d-AcXOPQ"
+                ],
+                "linkedNodes": {}
+              },
+              "25d-AcXOPQ": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": true,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "100%",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": true,
+                  "borderRadius": 4,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {
+                    "overflow": "hidden"
+                  },
+                  "data": {}
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container2"
+                },
+                "parent": "XjwErRnuJP",
+                "hidden": false,
+                "nodes": [
+                  "BPCo_0MXet"
+                ],
+                "linkedNodes": {}
+              },
+              "BPCo_0MXet": {
+                "type": {
+                  "resolvedName": "EmbeddedWebpage"
+                },
+                "isCanvas": true,
+                "props": {
+                  "url": {
+                    "__transform": "$components.TopologyForm.data.dashboardUri",
+                    "__dynamicFields": {
+                      "payload": null,
+                      "context": []
+                    },
+                    "__cacheKey": "",
+                    "__remote": false
+                  },
+                  "width": "100%",
+                  "height": "auto",
+                  "allowSameOrigin": true,
+                  "allowScripts": true,
+                  "allowPopups": true,
+                  "allowDownloads": true,
+                  "allowForms": true,
+                  "windowModals": true,
+                  "style": {
+                    "aspect-ratio": "1.67/1"
+                  }
+                },
+                "displayName": "Webpage",
+                "custom": {
+                  "elementName": "Webpage2"
+                },
+                "parent": "25d-AcXOPQ",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "FphSo2foJC": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": false,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "auto",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {},
+                  "data": {}
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container3"
+                },
+                "parent": "ROOT",
+                "hidden": false,
+                "nodes": [
+                  "2N9wcEePYk",
+                  "u1b5-83YUX",
+                  "M_Z-a5pnU5",
+                  "tzDxXLAQpD",
+                  "zdBkG0eveX",
+                  "2PaX2FC-1K"
+                ],
+                "linkedNodes": {}
+              },
+              "g-HcfIlBS1": {
+                "type": {
+                  "resolvedName": "EmbeddedWebpage"
+                },
+                "isCanvas": true,
+                "props": {
+                  "url": {
+                    "__transform": "$components.ThroughPutForm.data.dashboardUri",
+                    "__dynamicFields": {
+                      "payload": null,
+                      "context": []
+                    },
+                    "__cacheKey": "",
+                    "__remote": false
+                  },
+                  "width": "100%",
+                  "height": "100%",
+                  "allowSameOrigin": true,
+                  "allowScripts": true,
+                  "allowPopups": true,
+                  "allowDownloads": true,
+                  "allowForms": true,
+                  "windowModals": true,
+                  "style": {}
+                },
+                "displayName": "Webpage",
+                "custom": {
+                  "elementName": "Webpage3"
+                },
+                "parent": "IkZbT7-3mT",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "wGmqY0AHpQ": {
+                "type": {
+                  "resolvedName": "Form"
+                },
+                "isCanvas": true,
+                "props": {
+                  "query": {
+                    "api": "Application",
+                    "query": null,
+                    "dataPath": "edges[0]",
+                    "dataTransform": {
+                      "transform": "$executeFlow(\"integrationOrchestratorDashboard\",{\"section\": \"throughput\", \"range\": \"1h\", \"themeMode\": $metadata.settings.ThemeMode})",
+                      "remote": false
+                    },
+                    "dataSubscription": {
+                      "enabled": false
+                    },
+                    "autoLoad": true,
+                    "parameters": "{\n  \"filter\": {\n    \"id\": {\n      \"_eq\": id\n    }\n  },\n  \"first\": 1\n}",
+                    "fields": [
+                      "id"
+                    ],
+                    "disableDataChangeIndicator": false,
+                    "dataChangeIndicatorSize": "normal"
+                  },
+                  "blockNavigationWhenDirty": true,
+                  "enableConfirmOnDataChanged": false
+                },
+                "displayName": "Form",
+                "custom": {
+                  "elementName": "ThroughPutForm"
+                },
+                "parent": "tzDxXLAQpD",
+                "hidden": false,
+                "nodes": [
+                  "IkZbT7-3mT"
+                ],
+                "linkedNodes": {}
+              },
+              "u1b5-83YUX": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": true,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "155",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {}
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container5"
+                },
+                "parent": "FphSo2foJC",
+                "hidden": false,
+                "nodes": [
+                  "Q8xKJMLyur"
+                ],
+                "linkedNodes": {}
+              },
+              "IkZbT7-3mT": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": true,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "100%",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "flexShrink": true,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {}
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container6"
+                },
+                "parent": "wGmqY0AHpQ",
+                "hidden": false,
+                "nodes": [
+                  "g-HcfIlBS1"
+                ],
+                "linkedNodes": {}
+              },
+              "tzDxXLAQpD": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": true,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "auto",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {
+                    "aspect-ratio": "2.8/1"
+                  },
+                  "data": {}
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container7"
+                },
+                "parent": "FphSo2foJC",
+                "hidden": false,
+                "nodes": [
+                  "wGmqY0AHpQ"
+                ],
+                "linkedNodes": {}
+              },
+              "M_Z-a5pnU5": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": true,
+                  "flexDirection": "row",
+                  "justifyContent": "space-between",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "auto",
+                  "hidden": false,
+                  "flexGrow": true,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {}
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container8"
+                },
+                "parent": "FphSo2foJC",
+                "hidden": false,
+                "nodes": [
+                  "ngM9del6Ir",
+                  "WLTGGsHyFI"
+                ],
+                "linkedNodes": {}
+              },
+              "VO-SYaMVxf": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": true,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "100%",
+                  "hidden": false,
+                  "flexGrow": true,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {},
+                  "data": {}
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container9"
+                },
+                "parent": "1H_pYtYtn0",
+                "hidden": false,
+                "nodes": [
+                  "eZl1WqXKC0"
+                ],
+                "linkedNodes": {}
+              },
+              "eZl1WqXKC0": {
+                "type": {
+                  "resolvedName": "EmbeddedWebpage"
+                },
+                "isCanvas": true,
+                "props": {
+                  "url": {
+                    "__transform": "$components.ActivityForm.data.dashboardUri",
+                    "__dynamicFields": {
+                      "payload": null,
+                      "context": []
+                    },
+                    "__cacheKey": "",
+                    "__remote": false
+                  },
+                  "width": "100%",
+                  "height": "100%",
+                  "allowSameOrigin": false,
+                  "allowScripts": false,
+                  "allowPopups": false,
+                  "allowDownloads": false,
+                  "allowForms": false,
+                  "windowModals": false,
+                  "style": {}
+                },
+                "displayName": "Webpage",
+                "custom": {
+                  "elementName": "Webpage4"
+                },
+                "parent": "VO-SYaMVxf",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "1H_pYtYtn0": {
+                "type": {
+                  "resolvedName": "Form"
+                },
+                "isCanvas": true,
+                "props": {
+                  "query": {
+                    "api": "Application",
+                    "query": null,
+                    "dataPath": "edges[0]",
+                    "dataTransform": {
+                      "transform": "$executeFlow(\"integrationOrchestratorDashboard\",{\"section\": \"activity\", \"themeMode\": $metadata.settings.ThemeMode})",
+                      "remote": false
+                    },
+                    "dataSubscription": {
+                      "enabled": false
+                    },
+                    "autoLoad": true,
+                    "parameters": "{\n  \"filter\": {\n    \"id\": {\n      \"_eq\": id\n    }\n  },\n  \"first\": 1\n}",
+                    "fields": [
+                      "id"
+                    ],
+                    "disableDataChangeIndicator": false,
+                    "dataChangeIndicatorSize": "normal"
+                  },
+                  "blockNavigationWhenDirty": true,
+                  "enableConfirmOnDataChanged": false
+                },
+                "displayName": "Form",
+                "custom": {
+                  "elementName": "ActivityForm"
+                },
+                "parent": "WLTGGsHyFI",
+                "hidden": false,
+                "nodes": [
+                  "VO-SYaMVxf"
+                ],
+                "linkedNodes": {}
+              },
+              "ngM9del6Ir": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": true,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "60%",
+                  "height": "100%",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {
+                    "aspect-ratio": "1.60/1"
+                  }
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container11"
+                },
+                "parent": "M_Z-a5pnU5",
+                "hidden": false,
+                "nodes": [
+                  "XjwErRnuJP"
+                ],
+                "linkedNodes": {}
+              },
+              "WLTGGsHyFI": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": true,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "40%",
+                  "height": "auto",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {}
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container13"
+                },
+                "parent": "M_Z-a5pnU5",
+                "hidden": false,
+                "nodes": [
+                  "1H_pYtYtn0"
+                ],
+                "linkedNodes": {}
+              },
+              "zdBkG0eveX": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": false,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "500px",
+                  "hidden": false,
+                  "flexGrow": true,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {
+                    "overflow-y": "scroll"
+                  },
+                  "data": {}
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container14"
+                },
+                "parent": "FphSo2foJC",
+                "hidden": false,
+                "nodes": [
+                  "vw5XUhrmPf",
+                  "R_G6tB3Or3"
+                ],
+                "linkedNodes": {}
+              },
+              "2PaX2FC-1K": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": true,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "450px",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {}
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container19"
+                },
+                "parent": "FphSo2foJC",
+                "hidden": false,
+                "nodes": [
+                  "T-a4JkfJcr"
+                ],
+                "linkedNodes": {}
+              },
+              "T-a4JkfJcr": {
+                "type": {
+                  "resolvedName": "Form"
+                },
+                "isCanvas": true,
+                "props": {
+                  "query": {
+                    "api": "Application",
+                    "query": null,
+                    "dataPath": "edges[0]",
+                    "dataTransform": {
+                      "transform": "$executeFlow(\"integrationOrchestratorDashboard\",{\"section\": \"errorQueue\", \"themeMode\": $metadata.settings.ThemeMode})",
+                      "remote": false
+                    },
+                    "dataSubscription": {
+                      "enabled": false
+                    },
+                    "autoLoad": true,
+                    "parameters": "{\n  \"filter\": {\n    \"id\": {\n      \"_eq\": id\n    }\n  },\n  \"first\": 1\n}",
+                    "fields": [
+                      "id"
+                    ],
+                    "disableDataChangeIndicator": false,
+                    "dataChangeIndicatorSize": "normal"
+                  },
+                  "blockNavigationWhenDirty": true,
+                  "enableConfirmOnDataChanged": false
+                },
+                "displayName": "Form",
+                "custom": {
+                  "elementName": "ErrorQueueForm"
+                },
+                "parent": "2PaX2FC-1K",
+                "hidden": false,
+                "nodes": [
+                  "v_ZSkPDNO1"
+                ],
+                "linkedNodes": {}
+              },
+              "v_ZSkPDNO1": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": true,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "100%",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {},
+                  "data": {}
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container21"
+                },
+                "parent": "T-a4JkfJcr",
+                "hidden": false,
+                "nodes": [
+                  "dr4IJQPtRO"
+                ],
+                "linkedNodes": {}
+              },
+              "dr4IJQPtRO": {
+                "type": {
+                  "resolvedName": "EmbeddedWebpage"
+                },
+                "isCanvas": true,
+                "props": {
+                  "url": {
+                    "__transform": "$components.ErrorQueueForm.data.dashboardUri",
+                    "__dynamicFields": {
+                      "payload": null,
+                      "context": []
+                    },
+                    "__cacheKey": "",
+                    "__remote": false
+                  },
+                  "width": "100%",
+                  "height": "100%",
+                  "allowSameOrigin": false,
+                  "allowScripts": false,
+                  "allowPopups": false,
+                  "allowDownloads": false,
+                  "allowForms": false,
+                  "windowModals": false,
+                  "style": {}
+                },
+                "displayName": "Webpage",
+                "custom": {
+                  "elementName": "Webpage7"
+                },
+                "parent": "v_ZSkPDNO1",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "vw5XUhrmPf": {
+                "type": {
+                  "resolvedName": "RichText"
+                },
+                "isCanvas": false,
+                "props": {
+                  "width": "100%",
+                  "height": "auto",
+                  "content": {
+                    "blocks": [
+                      {
+                        "key": "cl9qaup740002356nczbdvi6q",
+                        "text": "    Connector",
+                        "type": "header-three",
+                        "depth": 0,
+                        "inlineStyleRanges": [
+                          {
+                            "offset": 0,
+                            "length": 13,
+                            "style": "fontfamily-Roboto"
+                          },
+                          {
+                            "offset": 0,
+                            "length": 13,
+                            "style": "fontsize-18"
+                          }
+                        ],
+                        "entityRanges": [],
+                        "data": {}
+                      }
+                    ],
+                    "entityMap": {}
+                  }
+                },
+                "displayName": "Text",
+                "custom": {
+                  "elementName": "Text4"
+                },
+                "parent": "zdBkG0eveX",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "YokY3MDzdt": {
+                "type": {
+                  "resolvedName": "Form"
+                },
+                "isCanvas": true,
+                "props": {
+                  "query": {
+                    "api": "Application",
+                    "query": null,
+                    "dataPath": "edges[0]",
+                    "dataTransform": {
+                      "transform": null,
+                      "remote": false
+                    },
+                    "dataSubscription": {
+                      "enabled": false
+                    },
+                    "autoLoad": true,
+                    "parameters": "{\n  \"filter\": {\n    \"id\": {\n      \"_eq\": id\n    }\n  },\n  \"first\": 1\n}",
+                    "fields": [
+                      "id"
+                    ],
+                    "disableDataChangeIndicator": false,
+                    "dataChangeIndicatorSize": "normal"
+                  },
+                  "blockNavigationWhenDirty": true,
+                  "enableConfirmOnDataChanged": false
+                },
+                "displayName": "Form",
+                "custom": {
+                  "elementName": "TitleForm"
+                },
+                "parent": "2N9wcEePYk",
+                "hidden": false,
+                "nodes": [
+                  "vDYzkPeqsi"
+                ],
+                "linkedNodes": {}
+              },
+              "vDYzkPeqsi": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": false,
+                  "flexDirection": "row",
+                  "justifyContent": "space-around",
+                  "alignItems": "center",
+                  "width": "100%",
+                  "height": "auto",
+                  "hidden": false,
+                  "flexGrow": true,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {},
+                  "data": {}
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container24"
+                },
+                "parent": "YokY3MDzdt",
+                "hidden": false,
+                "nodes": [
+                  "OgcAHvvU8O",
+                  "QWd84ToczL",
+                  "kjHV_vaXYP",
+                  "WEJw2prS71"
+                ],
+                "linkedNodes": {}
+              },
+              "kjHV_vaXYP": {
+                "type": {
+                  "resolvedName": "DisplayText"
+                },
+                "isCanvas": false,
+                "props": {
+                  "padding": 8,
+                  "width": "80%",
+                  "height": "auto",
+                  "validation": {
+                    "required": false
+                  },
+                  "uniqueValidationEnabled": false,
+                  "visible": true,
+                  "type": "display",
+                  "label": "Text",
+                  "justifyContent": "start",
+                  "alignTextItems": "start",
+                  "labelFontSize": "body1",
+                  "fontSize": "h2",
+                  "data": {
+                    "__transform": "\"Integration Dashboard\""
+                  },
+                  "formElement": "TitleForm",
+                  "target": {
+                    "dataPath": null
+                  },
+                  "dataPath": "title",
+                  "labelPosition": {
+                    "id": "null",
+                    "label": "None"
+                  }
+                },
+                "displayName": "Text",
+                "custom": {
+                  "elementName": "Text7"
+                },
+                "parent": "vDYzkPeqsi",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "QWd84ToczL": {
+                "type": {
+                  "resolvedName": "Icon"
+                },
+                "isCanvas": false,
+                "props": {
+                  "icon": {
+                    "icon": "chart-network",
+                    "color": "info",
+                    "variant": "regular",
+                    "size": "icon"
+                  },
+                  "title": "Icon",
+                  "height": "56px",
+                  "width": "56px"
+                },
+                "displayName": "Icon",
+                "custom": {
+                  "elementName": "Icon1"
+                },
+                "parent": "vDYzkPeqsi",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "OgcAHvvU8O": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": true,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "10px",
+                  "height": "auto",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {}
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container25"
+                },
+                "parent": "vDYzkPeqsi",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "etBiQwJH7b": {
+                "type": {
+                  "resolvedName": "ActionButton"
+                },
+                "isCanvas": false,
+                "props": {
+                  "margin": 6,
+                  "buttonColor": "primary",
+                  "width": "76px",
+                  "height": "48px",
+                  "disabled": false,
+                  "hidden": false,
+                  "useIconButton": true,
+                  "disableHover": false,
+                  "disableRipple": false,
+                  "action": [
+                    {
+                      "type": "navigation",
+                      "navigationType": "New Webpage",
+                      "target": "/system/integration/integrationTransactions",
+                      "newWindow": true
+                    }
+                  ],
+                  "icon": {
+                    "icon": "list",
+                    "color": "info",
+                    "variant": "duotone",
+                    "size": "xlarge"
+                  },
+                  "title": "Integration Transactions"
+                },
+                "displayName": "Action",
+                "custom": {
+                  "elementName": "Action2"
+                },
+                "parent": "WEJw2prS71",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "R_G6tB3Or3": {
+                "type": {
+                  "resolvedName": "Form"
+                },
+                "isCanvas": true,
+                "props": {
+                  "query": {
+                    "api": "Application",
+                    "query": null,
+                    "dataPath": "edges[0]",
+                    "dataTransform": {
+                      "transform": "$executeFlow(\"integrationOrchestratorDashboard\",{\"section\": \"connectors\", \"themeMode\": $metadata.settings.ThemeMode})",
+                      "remote": false
+                    },
+                    "dataSubscription": {
+                      "enabled": false
+                    },
+                    "autoLoad": true,
+                    "parameters": "{\n  \"filter\": {\n    \"id\": {\n      \"_eq\": id\n    }\n  },\n  \"first\": 1\n}",
+                    "fields": [
+                      "id"
+                    ],
+                    "disableDataChangeIndicator": false,
+                    "dataChangeIndicatorSize": "normal"
+                  },
+                  "blockNavigationWhenDirty": true,
+                  "enableConfirmOnDataChanged": false
+                },
+                "displayName": "Form",
+                "custom": {
+                  "elementName": "ConnectorsForm"
+                },
+                "parent": "zdBkG0eveX",
+                "hidden": false,
+                "nodes": [
+                  "GIjanr7w_d"
+                ],
+                "linkedNodes": {}
+              },
+              "GIjanr7w_d": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": true,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "100%",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "flexShrink": true,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {}
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container26"
+                },
+                "parent": "R_G6tB3Or3",
+                "hidden": false,
+                "nodes": [
+                  "v_1d716ZLl"
+                ],
+                "linkedNodes": {}
+              },
+              "v_1d716ZLl": {
+                "type": {
+                  "resolvedName": "EmbeddedWebpage"
+                },
+                "isCanvas": true,
+                "props": {
+                  "url": {
+                    "__transform": "$components.ConnectorsForm.data.dashboardUri",
+                    "__dynamicFields": {
+                      "payload": null,
+                      "context": []
+                    },
+                    "__cacheKey": "",
+                    "__remote": false
+                  },
+                  "width": "100%",
+                  "height": "100%",
+                  "allowSameOrigin": true,
+                  "allowScripts": true,
+                  "allowPopups": true,
+                  "allowDownloads": true,
+                  "allowForms": true,
+                  "windowModals": true,
+                  "style": {}
+                },
+                "displayName": "Webpage",
+                "custom": {
+                  "elementName": "Webpage8"
+                },
+                "parent": "GIjanr7w_d",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "CGaa2GNJqt": {
+                "type": {
+                  "resolvedName": "ActionButton"
+                },
+                "isCanvas": false,
+                "props": {
+                  "margin": 6,
+                  "buttonColor": "primary",
+                  "width": "76px",
+                  "height": "48px",
+                  "disabled": false,
+                  "hidden": false,
+                  "useIconButton": true,
+                  "disableHover": false,
+                  "disableRipple": false,
+                  "action": [
+                    {
+                      "type": "transformation",
+                      "transformation": "$components.SideBarContainer.fn.show()"
+                    }
+                  ],
+                  "icon": {
+                    "icon": "circle-question",
+                    "color": "info",
+                    "variant": "duotone",
+                    "size": "xlarge"
+                  }
+                },
+                "displayName": "Action",
+                "custom": {
+                  "elementName": "Action3"
+                },
+                "parent": "WEJw2prS71",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "WEJw2prS71": {
+                "type": {
+                  "resolvedName": "ButtonsGroup"
+                },
+                "isCanvas": true,
+                "props": {
+                  "margin": 6,
+                  "width": "200px",
+                  "height": "auto"
+                },
+                "displayName": "Button Group",
+                "custom": {
+                  "elementName": "ButtonGroup1"
+                },
+                "parent": "vDYzkPeqsi",
+                "hidden": false,
+                "nodes": [
+                  "etBiQwJH7b",
+                  "CGaa2GNJqt"
+                ],
+                "linkedNodes": {}
+              },
+              "2N9wcEePYk": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": true,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "100px",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {},
+                  "data": {}
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container22"
+                },
+                "parent": "FphSo2foJC",
+                "hidden": false,
+                "nodes": [
+                  "YokY3MDzdt"
+                ],
+                "linkedNodes": {}
+              },
+              "UwcB4KtaH-": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": false,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "640px",
+                  "height": "100%",
+                  "hidden": true,
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": true,
+                  "borderRadius": 4,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {
+                    "borderMode": "full",
+                    "border": "1px solid #f2f1f0"
+                  },
+                  "justifyItems": "start",
+                  "style": {
+                    "__transform": "{\r\n\t\"min-width\": \"640px\",\r\n\t\"max-width\": \"640px\",\r\n\t\"width\": \"640px\",\r\n\t\"min-height\": \"100%\",\r\n\t\"max-height\": \"100%\",\r\n\t\"position\": \"absolute\",\r\n\t\"top\": \"0\",\r\n\t\"right\": \"0\",\r\n\t\"overflow-y\": \"auto\",\r\n\t\"overflow-x\": \"hidden\",\r\n\t\"z-index\": \"9000\"\r\n}",
+                    "__dynamicFields": {
+                      "payload": null,
+                      "context": []
+                    },
+                    "__cacheKey": "",
+                    "__remote": false
+                  },
+                  "data": {}
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "SideBarContainer"
+                },
+                "parent": "ROOT",
+                "hidden": false,
+                "nodes": [
+                  "r2UXnWpeER",
+                  "0jy-dpzsbe"
+                ],
+                "linkedNodes": {}
+              },
+              "r2UXnWpeER": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 8,
+                  "margin": 0,
+                  "flexWrap": false,
+                  "flexDirection": "row",
+                  "justifyContent": "flex-end",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "0",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {
+                    "__transform": "{\r\n  \"z-index\": \"1000\"\r\n}",
+                    "__dynamicFields": {
+                      "payload": null,
+                      "context": []
+                    },
+                    "__cacheKey": "",
+                    "__remote": false
+                  }
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container35"
+                },
+                "parent": "UwcB4KtaH-",
+                "hidden": false,
+                "nodes": [
+                  "1uKlozmU_P"
+                ],
+                "linkedNodes": {}
+              },
+              "1uKlozmU_P": {
+                "type": {
+                  "resolvedName": "ActionButton"
+                },
+                "isCanvas": false,
+                "props": {
+                  "margin": 0,
+                  "buttonColor": "primary",
+                  "width": "30",
+                  "height": "30",
+                  "disabled": false,
+                  "hidden": false,
+                  "useIconButton": true,
+                  "disableHover": true,
+                  "disableRipple": true,
+                  "action": [
+                    {
+                      "type": "transformation",
+                      "transformation": "(\r\n  $components.SideBarContainer.fn.hide()\r\n)",
+                      "remote": false,
+                      "transforms": {}
+                    }
+                  ],
+                  "icon": {
+                    "icon": "square-xmark",
+                    "color": "error",
+                    "variant": "light",
+                    "size": "medium"
+                  },
+                  "title": "Close Tab"
+                },
+                "displayName": "Action",
+                "custom": {
+                  "elementName": "Action6"
+                },
+                "parent": "r2UXnWpeER",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "0jy-dpzsbe": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 4,
+                  "margin": 0,
+                  "flexWrap": true,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "100%",
+                  "hidden": false,
+                  "flexGrow": true,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {
+                    "background": "rgba(255, 255, 255, 0.12)",
+                    "backdropFilter": "blur(18px)",
+                    "WebkitBackdropFilter": "blur(18px)",
+                    "borderRadius": "24px",
+                    "border": "1px solid rgba(255, 255, 255, 0.18)",
+                    "boxShadow": "inset 0 1px 1px rgba(255, 255, 255, 0.35), inset 0 -1px 1px rgba(255, 255, 255, 0.08), 0 8px 32px rgba(0, 0, 0, 0.18)",
+                    "backgroundImage": "linear-gradient(145deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.05))",
+                    "padding": "20px"
+                  }
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container37"
+                },
+                "parent": "UwcB4KtaH-",
+                "hidden": false,
+                "nodes": [
+                  "YJxejyKSL7"
+                ],
+                "linkedNodes": {}
+              },
+              "YJxejyKSL7": {
+                "type": {
+                  "resolvedName": "Form"
+                },
+                "isCanvas": true,
+                "props": {
+                  "query": {
+                    "api": "Application",
+                    "query": null,
+                    "dataPath": "edges[0]",
+                    "dataTransform": {
+                      "transform": null,
+                      "remote": true
+                    },
+                    "dataSubscription": {
+                      "enabled": false
+                    },
+                    "autoLoad": true,
+                    "parameters": "{\n  \"filter\": {\n    \"id\": {\n      \"_eq\": id\n    }\n  },\n  \"first\": 1\n}",
+                    "fields": [
+                      "id"
+                    ],
+                    "disableDataChangeIndicator": false,
+                    "dataChangeIndicatorSize": "normal"
+                  },
+                  "blockNavigationWhenDirty": true,
+                  "enableConfirmOnDataChanged": false
+                },
+                "displayName": "Form",
+                "custom": {
+                  "elementName": "Form11"
+                },
+                "parent": "0jy-dpzsbe",
+                "hidden": false,
+                "nodes": [
+                  "M4nf-XnQlL"
+                ],
+                "linkedNodes": {}
+              },
+              "M4nf-XnQlL": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": true,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "100%",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {}
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container36"
+                },
+                "parent": "YJxejyKSL7",
+                "hidden": false,
+                "nodes": [
+                  "24ZHXWU2Pw"
+                ],
+                "linkedNodes": {}
+              },
+              "24ZHXWU2Pw": {
+                "type": {
+                  "resolvedName": "DisplayText"
+                },
+                "isCanvas": false,
+                "props": {
+                  "padding": 8,
+                  "width": "100%",
+                  "height": "auto",
+                  "validation": {
+                    "required": false
+                  },
+                  "uniqueValidationEnabled": false,
+                  "visible": true,
+                  "type": "display",
+                  "label": " ",
+                  "justifyContent": "start",
+                  "alignTextItems": "start",
+                  "labelFontSize": "body1",
+                  "fontSize": "body1",
+                  "target": {
+                    "dataPath": null
+                  },
+                  "dataPath": "instruction",
+                  "formElement": "Form24",
+                  "data": {
+                    "__transform": "(\n  /* Theme comes from the request context; change this line if you pass it elsewhere. */\n  $theme := $lowercase($string($metadata.settings.ThemeMode)) = \"light\" ? \"light\" : \"dark\";\n  $pal := $theme = \"light\"\n    ? { \"bg\": \"#f4f2fb\", \"panel\": \"#ffffff\", \"panel2\": \"#f6f4fd\", \"text\": \"#1b1730\", \"muted\": \"#6b6490\", \"border\": \"rgba(27,23,48,.10)\", \"accent\": \"#6d4bff\", \"accent2\": \"#5a37e6\", \"ok\": \"#10b981\", \"warn\": \"#d97706\", \"err\": \"#dc2626\", \"info\": \"#2563eb\", \"chip\": \"rgba(109,75,255,.10)\" }\n    : { \"bg\": \"#201d2e\", \"panel\": \"#2a2640\", \"panel2\": \"#322d4d\", \"text\": \"#ece9f7\", \"muted\": \"#a59fc4\", \"border\": \"rgba(165,159,196,.16)\", \"accent\": \"#7c5cff\", \"accent2\": \"#9d7bff\", \"ok\": \"#34d399\", \"warn\": \"#fbbf24\", \"err\": \"#f87171\", \"info\": \"#60a5fa\", \"chip\": \"rgba(124,92,255,.14)\" };\n  \"<!DOCTYPE html> <html lang='en'> <head> <meta charset='UTF-8'> <meta name='viewport' content='width=device-width, initial-scale=1'> <title>Integration Orchestrator — Metrics Guide</title> <style> :root{--bg:{{bg}};--panel:{{panel}};--panel2:{{panel2}};--text:{{text}};--muted:{{muted}};--border:{{border}};--accent:{{accent}};--accent2:{{accent2}};--ok:{{ok}};--warn:{{warn}};--err:{{err}};--info:{{info}};--chip:{{chip}};} *{box-sizing:border-box;margin:0;padding:0} html,body{background:transparent} body{color:var(--text); font-family:-apple-system,BlinkMacSystemFont,Roboto,Helvetica,Arial,sans-serif; line-height:1.5;padding:4px 2px 24px;-webkit-font-smoothing:antialiased} /* bold inherits the surrounding (theme) color so it never falls back to a dark default */ b, strong{color:inherit;font-weight:700} h1, h2{color:var(--text)} .wrap{max-width:880px;margin:0 auto} /* hero */ .hero{position:relative;overflow:hidden;border:1px solid var(--border);border-radius:20px; background:linear-gradient(135deg,var(--panel) 0%,var(--panel2) 100%);padding:26px 28px;margin-bottom:18px} .hero::after{content:'';position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%; background:radial-gradient(circle,var(--accent),transparent 70%);opacity:.18} .eyebrow{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent2)} .hero h1{font-size:27px;font-weight:800;letter-spacing:-.01em;margin:8px 0 6px} .hero p{color:var(--muted);font-size:14px;max-width:60ch} .toggle{position:absolute;top:18px;right:20px;z-index:2;border:1px solid var(--border);background:transparent; color:var(--muted);border-radius:999px;padding:6px 13px;font:600 12px/1 inherit;cursor:pointer} .toggle:hover{border-color:var(--accent);color:var(--accent)} /* key terms strip */ .terms{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0} .term{display:inline-flex;align-items:center;gap:7px;background:var(--chip);border:1px solid var(--border); border-radius:999px;padding:6px 12px;font-size:12.5px} .term b{font-weight:700} .term .k{color:var(--muted);font-weight:600} /* section card */ .card{background:var(--panel);border:1px solid var(--border);border-radius:18px;padding:22px 24px;margin-top:16px} .card-h{display:flex;align-items:center;gap:13px;margin-bottom:6px} .num{flex:0 0 auto;width:32px;height:32px;border-radius:10px;display:flex;align-items:center;justify-content:center; font-weight:800;font-size:14px;color:#fff;background:var(--accent)} .card-h h2{font-size:18px;font-weight:800} .card-sub{color:var(--muted);font-size:13.5px;margin:0 0 4px 45px} .scope{display:inline-block;margin-left:45px;margin-bottom:14px;font-size:11px;font-weight:700;letter-spacing:.05em; text-transform:uppercase;color:var(--accent2);background:var(--chip);border-radius:6px;padding:3px 9px} /* metric rows */ .metric{display:grid;grid-template-columns:170px 1fr;gap:6px 18px;padding:13px 0;border-top:1px solid var(--border)} .metric:first-of-type{border-top:0} .m-name{display:flex;align-items:center;gap:8px;font-weight:700;font-size:14px} .m-name .dot{width:8px;height:8px;border-radius:999px;flex:0 0 auto} .m-body{font-size:13.5px;color:var(--text)} .m-body .d{color:var(--muted)} .formula{display:inline-block;margin-top:6px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:12.5px;background:var(--panel2);border:1px solid var(--border);border-radius:7px;padding:5px 9px;color:var(--text)} /* simple bullet list for severity etc. */ ul.clean{list-style:none;margin:6px 0 0;padding:0} ul.clean li{display:flex;gap:9px;align-items:flex-start;font-size:13.5px;padding:4px 0} ul.clean li .dot{margin-top:6px} .pill{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;text-transform:uppercase; letter-spacing:.04em;padding:3px 9px;border-radius:999px} /* reference grid */ .ref{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:14px} .ref .item{background:var(--panel2);border:1px solid var(--border);border-radius:12px;padding:12px 14px} .ref .item .k{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)} .ref .item .v{font-size:14px;font-weight:700;margin-top:3px} .foot{color:var(--muted);font-size:12.5px;margin-top:22px;padding-left:4px;border-left:3px solid var(--accent);padding:6px 0 6px 12px} code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.92em; background:var(--panel2);border:1px solid var(--border);border-radius:5px;padding:1px 5px} @media(max-width:560px){.metric{grid-template-columns:1fr}.card-sub,.scope{margin-left:0}} </style> </head> <body> <div class='wrap'> <header class='hero'> <div class='eyebrow'>Integration Orchestrator</div> <h1>Metrics Guide</h1> <p>How every number on the dashboard is calculated. All figures are derived from <b>integration staging records</b> — one record per integration transaction.</p> <div class='terms'> <span class='term'><span class='k'>Window</span><b>Last 24&nbsp;hours</b></span> <span class='term'><span class='k'>Connector</span><b>by integration type</b></span> <span class='term'><span class='dot' style='width:8px;height:8px;border-radius:999px;background:var(--err);display:inline-block'></span><span class='k'>Error</span><b><code>Integration Error</code> or <code>appPostError</code></b></span> <span class='term'><span class='k'>Latency</span><b>processed − created</b></span> </div> </header> <!-- 1 Header --> <section class='card'> <div class='card-h'><div class='num' style='background:var(--accent)'>1</div><h2>Header cards</h2></div> <div class='scope'>Last 24 hours</div> <div class='metric'> <div class='m-name'><span class='dot' style='background:var(--accent)'></span>Messages (24H)</div> <div class='m-body'><span class='d'>Total integration transactions in the window.</span> <div class='formula'>count(records) &nbsp;·&nbsp; /min = total ÷ window minutes</div></div> </div> <div class='metric'> <div class='m-name'><span class='dot' style='background:var(--ok)'></span>Success rate</div> <div class='m-body'><span class='d'>Share processed cleanly.</span> <div class='formula'>(total − failed) ÷ total × 100</div></div> </div> <div class='metric'> <div class='m-name'><span class='dot' style='background:var(--err)'></span>Failed (24H)</div> <div class='m-body'><span class='d'>Transactions that errored.</span> <div class='formula'>count where status = 'Integration Error' OR appPostError = true</div></div> </div> <div class='metric'> <div class='m-name'><span class='dot' style='background:var(--info)'></span>Avg latency</div> <div class='m-body'><span class='d'>Typical create→processed time, averaged over a recent sample.</span> <div class='formula'>avg(processedAt − createdAt)</div></div> </div> <div class='metric'> <div class='m-name'><span class='dot' style='background:var(--accent2)'></span>Active flows</div> <div class='m-body'><span class='d'>Live integration configurations.</span> <div class='formula'>count(integrationConfig where active = true)</div></div> </div> </section> <!-- 2 Topology --> <section class='card'> <div class='card-h'><div class='num' style='background:#1f9d63'>2</div><h2>Integration topology</h2></div> <p class='card-sub'>Hub-and-spoke view of each connector over the last 24 hours. Spoke thickness and packet animation reflect volume and direction.</p> <div class='metric'> <div class='m-name'>Direction</div> <div class='m-body'><span class='d'>Inbound, Outbound, or Bi-directional, from <code>integrationConfig.isInbound</code> (Bi when both seen).</span></div> </div> <div class='metric'> <div class='m-name'>Health status</div> <div class='m-body'> <ul class='clean'> <li><span class='pill' style='background:rgba(220,59,75,.16);color:var(--err)'>Down</span><span class='d'>error rate ≥ 25% <b>and</b> ≥ 5 records in window</span></li> <li><span class='pill' style='background:rgba(253,139,9,.16);color:var(--warn)'>Idle</span><span class='d'>no activity in the last 30 minutes</span></li> <li><span class='pill' style='background:rgba(31,157,99,.16);color:var(--ok)'>Running</span><span class='d'>otherwise</span></li> </ul> <div class='formula'>error rate = errors ÷ total (per connector)</div> </div> </div> </section> <!-- 3 Throughput --> <section class='card'> <div class='card-h'><div class='num' style='background:var(--accent)'>3</div><h2>Message throughput</h2></div> <div class='scope'>Last 12 hours · 5-minute buckets</div> <div class='metric'> <div class='m-name'>Line value</div> <div class='m-body'><span class='d'>Messages in each 5-minute bucket (144 buckets across 12 hours).</span></div> </div> <div class='metric'> <div class='m-name'><span class='dot' style='background:var(--err)'></span>Red sections</div> <div class='m-body'><span class='d'>Any 5-minute bucket that contained at least one error is drawn red on the line.</span></div> </div> <div class='metric'> <div class='m-name'>Hover tooltip</div> <div class='m-body'><span class='d'>Total messages for the bucket, split into <b style='color:var(--ok)'>success</b> and <b style='color:var(--err)'>errors</b>, with the bucket time range (e.g. 08:15–08:20).</span></div> </div> </section> <!-- 4 Activity --> <section class='card'> <div class='card-h'><div class='num' style='background:var(--info)'>4</div><h2>Live activity</h2></div> <p class='card-sub'>The 30 most recent transactions across all connectors (newest first).</p> <div class='metric'> <div class='m-name'>Severity</div> <div class='m-body'> <ul class='clean'> <li><span class='dot' style='background:var(--err)'></span><span class='d'><b>Red</b> — error (Integration Error or appPostError)</span></li> <li><span class='dot' style='background:var(--warn)'></span><span class='d'><b>Amber</b> — a retry (attempt count &gt; 1)</span></li> <li><span class='dot' style='background:var(--ok)'></span><span class='d'><b>Green</b> — processed normally</span></li> </ul> </div> </div> </section> <!-- 5 Connectors --> <section class='card'> <div class='card-h'><div class='num' style='background:#f0883e'>5</div><h2>Connectors</h2></div> <div class='scope'>Per connector · Last 24 hours</div> <div class='metric'> <div class='m-name'><span class='dot' style='background:var(--accent)'></span>Throughput</div> <div class='m-body'><span class='d'>Average messages per minute over the window.</span> <div class='formula'>count ÷ window minutes</div></div> </div> <div class='metric'> <div class='m-name'><span class='dot' style='background:var(--info)'></span>Latency</div> <div class='m-body'><span class='d'>Average create→processed time for that connector (recent sample).</span> <div class='formula'>avg(processedAt − createdAt)</div></div> </div> <div class='metric'> <div class='m-name'><span class='dot' style='background:var(--ok)'></span>Success</div> <div class='m-body'><span class='d'>Clean processing rate.</span> <div class='formula'>(count − errors) ÷ count × 100</div></div> </div> <div class='metric'> <div class='m-name'><span class='dot' style='background:var(--warn)'></span>Queue</div> <div class='m-body'><span class='d'>Posting backlog — records that failed to post to the target app.</span> <div class='formula'>count where appPostError = true</div></div> </div> <div class='metric'> <div class='m-name'>Trend</div> <div class='m-body'><span class='d'>Sparkline of hourly message counts across the window.</span></div> </div> <div class='metric'> <div class='m-name'>Details popup</div> <div class='m-body'><span class='d'>Header metrics plus <b>Recent runs</b> — up to the 20 most recent records for the connector (newest first) with status, number, type, time, and attempt count.</span></div> </div> </section> <!-- 6 Error queue --> <section class='card'> <div class='card-h'><div class='num' style='background:var(--err)'>6</div><h2>Error queue</h2></div> <div class='scope'>Last 24 hours</div> <div class='metric'> <div class='m-name'>Filter</div> <div class='m-body'><span class='d'>Records that errored in the window — status 'Integration Error' or appPostError = true.</span></div> </div> <div class='metric'> <div class='m-name'>Grouping</div> <div class='m-body'><span class='d'>Grouped by a derived error code (from the start of the error message), so repeated failures collapse into one row with a count, the affected connector(s), and how long ago the latest one occurred.</span></div> </div> </section> <!-- Reference --> <section class='card'> <div class='card-h'><div class='num' style='background:var(--muted)'>★</div><h2>Quick reference</h2></div> <div class='ref'> <div class='item'><div class='k'>Default window</div><div class='v'>Last 24 hours</div></div> <div class='item'><div class='k'>Throughput chart</div><div class='v'>12 h · 5-min buckets</div></div> <div class='item'><div class='k'>Error definition</div><div class='v'>Integration Error / appPostError</div></div> <div class='item'><div class='k'>Down threshold</div><div class='v'>≥ 25% errors, ≥ 5 records</div></div> <div class='item'><div class='k'>Idle threshold</div><div class='v'>No activity in 30 min</div></div> <div class='item'><div class='k'>Latency</div><div class='v'>processed − created (sampled)</div></div> <div class='item'><div class='k'>Connector grouping</div><div class='v'>integrationConfig.integrationTypeId</div></div> <div class='item'><div class='k'>Times shown in</div><div class='v'>Your account timezone</div></div> </div> </section> <p class='foot'>Windows and thresholds are configured in the dashboard's data flow. If they change there, update this guide to match.</p> </div> </body> </html>\"\n    ~> $replace(\"{{bg}}\", $pal.bg)\n    ~> $replace(\"{{panel2}}\", $pal.panel2)\n    ~> $replace(\"{{panel}}\", $pal.panel)\n    ~> $replace(\"{{text}}\", $pal.text)\n    ~> $replace(\"{{muted}}\", $pal.muted)\n    ~> $replace(\"{{border}}\", $pal.border)\n    ~> $replace(\"{{accent2}}\", $pal.accent2)\n    ~> $replace(\"{{accent}}\", $pal.accent)\n    ~> $replace(\"{{ok}}\", $pal.ok)\n    ~> $replace(\"{{warn}}\", $pal.warn)\n    ~> $replace(\"{{err}}\", $pal.err)\n    ~> $replace(\"{{info}}\", $pal.info)\n    ~> $replace(\"{{chip}}\", $pal.chip)\n)"
+                  },
+                  "format": "markdown"
+                },
+                "displayName": "Text",
+                "custom": {
+                  "elementName": "Text10"
+                },
+                "parent": "M4nf-XnQlL",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "routes": [
+    {
+      "id": "cmqv2se5604h101bqhoo4cvw2",
+      "title": "Integration Dashboard",
+      "path": "/system/integration/integrationDashboard",
+      "moduleId": "integration",
+      "screenId": "integrationDashboard",
+      "isMenuAccessible": true,
+      "submenu": ""
+    }
+  ]
+}

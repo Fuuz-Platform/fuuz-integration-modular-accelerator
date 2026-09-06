@@ -1,0 +1,147 @@
+{
+  "api": "application",
+  "modelName": "StagingTableStatus",
+  "payload": [
+    {
+      "id": "Cannot Process",
+      "name": "Cannot Process",
+      "new": false,
+      "inProcess": false,
+      "processed": false,
+      "success": false,
+      "failure": true,
+      "autoRetry": false,
+      "color": "#ff5656",
+      "_customFields": {
+        "_externalId": null
+      }
+    },
+    {
+      "id": "Error",
+      "name": "Error",
+      "new": false,
+      "inProcess": false,
+      "processed": true,
+      "success": false,
+      "failure": true,
+      "autoRetry": false,
+      "color": "#ff5656",
+      "_customFields": {
+        "_externalId": null
+      }
+    },
+    {
+      "id": "Hold",
+      "name": "Hold",
+      "new": false,
+      "inProcess": false,
+      "processed": false,
+      "success": false,
+      "failure": false,
+      "autoRetry": false,
+      "color": "#ffff00",
+      "_customFields": {
+        "_externalId": null
+      }
+    },
+    {
+      "id": "Inprocess",
+      "name": "Inprocess",
+      "new": false,
+      "inProcess": true,
+      "processed": false,
+      "success": false,
+      "failure": false,
+      "autoRetry": false,
+      "color": "#fff700",
+      "_customFields": {
+        "_externalId": null
+      }
+    },
+    {
+      "id": "Integration Error",
+      "name": "Integration Error",
+      "new": false,
+      "inProcess": false,
+      "processed": true,
+      "success": false,
+      "failure": true,
+      "autoRetry": false,
+      "color": "#ff5656",
+      "_customFields": {
+        "_externalId": null
+      }
+    },
+    {
+      "id": "New",
+      "name": "New",
+      "new": true,
+      "inProcess": false,
+      "processed": false,
+      "success": false,
+      "failure": false,
+      "autoRetry": false,
+      "color": "#808080",
+      "_customFields": {
+        "_externalId": null
+      }
+    },
+    {
+      "id": "Processed",
+      "name": "Processed",
+      "new": false,
+      "inProcess": false,
+      "processed": false,
+      "success": true,
+      "failure": false,
+      "autoRetry": false,
+      "color": "#2be84f",
+      "_customFields": {
+        "_externalId": null
+      }
+    },
+    {
+      "id": "Processing Error",
+      "name": "Processing Error",
+      "new": false,
+      "inProcess": false,
+      "processed": true,
+      "success": false,
+      "failure": true,
+      "autoRetry": false,
+      "color": "#ff5656",
+      "_customFields": {
+        "_externalId": null
+      }
+    },
+    {
+      "id": "Queued",
+      "name": "Queued",
+      "new": false,
+      "inProcess": false,
+      "processed": false,
+      "success": false,
+      "failure": true,
+      "autoRetry": true,
+      "color": "#fff700",
+      "_customFields": {
+        "_externalId": null
+      }
+    },
+    {
+      "id": "Success",
+      "name": "Success",
+      "new": false,
+      "inProcess": false,
+      "processed": true,
+      "success": true,
+      "failure": false,
+      "autoRetry": false,
+      "color": "#ceff00",
+      "_customFields": {
+        "_externalId": null
+      }
+    }
+  ],
+  "metadata": {}
+}

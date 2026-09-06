@@ -1,0 +1,33 @@
+{
+  "api": "application",
+  "modelName": "Sequence",
+  "payload": [
+    {
+      "id": "integrationMessageNumber",
+      "name": "Integration Message Number",
+      "type": "String",
+      "increment": 1,
+      "prefix": "IM",
+      "suffix": "",
+      "zeroPadding": 12,
+      "_customFields": {
+        "_externalId": null
+      }
+    },
+    {
+      "id": "integrationStagingNumber",
+      "name": "Integration Staging Number",
+      "type": "String",
+      "increment": 1,
+      "prefix": "IS",
+      "suffix": "",
+      "zeroPadding": 12,
+      "_customFields": {
+        "_externalId": null
+      }
+    }
+  ],
+  "metadata": {
+    "insertEarly": true
+  }
+}

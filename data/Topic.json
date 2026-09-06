@@ -1,0 +1,47 @@
+{
+  "api": "application",
+  "modelName": "Topic",
+  "payload": [
+    {
+      "id": "cmdh1fxiq0wyu01828l7b7fln",
+      "name": "integration.main.handler",
+      "description": "- Topic used to trigger integration main handler flow",
+      "valueSchema": {},
+      "webhookAccessible": false,
+      "_customFields": {
+        "_externalId": null
+      }
+    },
+    {
+      "id": "cmdh4atgj120d01826en3b1fh",
+      "name": "integration.main.request.handler",
+      "description": "triggers integration main request handler flow",
+      "valueSchema": {},
+      "webhookAccessible": false,
+      "_customFields": {
+        "_externalId": null
+      }
+    },
+    {
+      "id": "cmf0pzo648g9r019k90rz2xas",
+      "name": "integration.outbound.record.processor",
+      "description": "- Topic to call Int_Outbound Record Processor data flow to format the request payload",
+      "valueSchema": {},
+      "webhookAccessible": false,
+      "_customFields": {
+        "_externalId": null
+      }
+    },
+    {
+      "id": "cmf1axwy18vi7019kfztw8h5e",
+      "name": "integration.outbound.request.handler",
+      "description": "- Topic to used to trigger integration outbound request handler flow",
+      "valueSchema": {},
+      "webhookAccessible": false,
+      "_customFields": {
+        "_externalId": null
+      }
+    }
+  ],
+  "metadata": {}
+}

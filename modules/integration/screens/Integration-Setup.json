@@ -1,0 +1,2471 @@
+{
+  "header": {
+    "id": "integrationSetup",
+    "name": "Integration Setup",
+    "description": "- Screen to configure the integration type and integration configuration",
+    "active": true,
+    "moduleId": "integration",
+    "substitutesScreenId": null,
+    "isWidget": false,
+    "_customFields": {
+      "_externalId": null
+    }
+  },
+  "version": {
+    "id": "cmraoy0he019s015e0ipngumh",
+    "number": "0.0.10",
+    "description": "- Update siteId and Enterprise Id mappings",
+    "screenId": "integrationSetup",
+    "design": {
+      "components": [
+        {
+          "name": "New Screen",
+          "tabTitle": "New Tab",
+          "type": "canvas",
+          "props": {
+            "design": {
+              "ROOT": {
+                "type": {
+                  "resolvedName": "Screen"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexDirection": "row",
+                  "flexWrap": false,
+                  "alignItems": "stretch",
+                  "justifyContent": "flex-start",
+                  "width": "100%",
+                  "height": "100%",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "flowsDelay": 0,
+                  "removeOuterMargin": true
+                },
+                "displayName": "Screen",
+                "custom": {
+                  "elementName": "Screen",
+                  "elementCounts": {
+                    "Tab Bar": 1,
+                    "Container": 50,
+                    "Text": 29,
+                    "Integer": 6,
+                    "Form": 8,
+                    "Action Button": 28,
+                    "Table Column": 196,
+                    "Custom Fields Table Column": 4,
+                    "Table": 21,
+                    "Screen": 1,
+                    "Checkbox": 4,
+                    "Select": 26,
+                    "Date Range": 2,
+                    "Action": 47,
+                    "Button Group": 6,
+                    "Switch": 7,
+                    "Resizable Panel": 2,
+                    "Tabs": 2,
+                    "JSON": 2,
+                    "Timer": 1
+                  }
+                },
+                "parent": null,
+                "hidden": false,
+                "nodes": [
+                  "nK3x0wPLOs",
+                  "BLweWRUWPy"
+                ],
+                "linkedNodes": {}
+              },
+              "nK3x0wPLOs": {
+                "type": {
+                  "resolvedName": "ResizablePanelLayout"
+                },
+                "isCanvas": true,
+                "props": {
+                  "handle": "right",
+                  "toggleHotkey": "",
+                  "defaultSize": 300,
+                  "axis": false,
+                  "minSize": 0,
+                  "maxSize": 800
+                },
+                "displayName": "Resizable Panel",
+                "custom": {
+                  "elementName": "ResizablePanel1"
+                },
+                "parent": "ROOT",
+                "hidden": false,
+                "nodes": [
+                  "oVx1GT12WY",
+                  "x_AK57FQkM"
+                ],
+                "linkedNodes": {}
+              },
+              "oVx1GT12WY": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": true,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "100%",
+                  "hidden": {
+                    "__transform": "$components.Tabs2.tabIndex != 0",
+                    "__dynamicFields": {
+                      "payload": null,
+                      "context": []
+                    },
+                    "__cacheKey": "",
+                    "__remote": false
+                  },
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {}
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container16"
+                },
+                "parent": "nK3x0wPLOs",
+                "hidden": false,
+                "nodes": [
+                  "CUcLoEEbS-"
+                ],
+                "linkedNodes": {}
+              },
+              "CUcLoEEbS-": {
+                "type": {
+                  "resolvedName": "Form"
+                },
+                "isCanvas": true,
+                "props": {
+                  "query": {
+                    "api": "Application",
+                    "model": "IntegrationType",
+                    "query": null,
+                    "dataPath": "edges[0]",
+                    "dataTransform": {
+                      "transform": null,
+                      "remote": true
+                    },
+                    "dataSubscription": {
+                      "enabled": false
+                    },
+                    "autoLoad": false
+                  },
+                  "blockNavigationWhenDirty": false,
+                  "enableConfirmOnDataChanged": false,
+                  "description": "Count of maximum number of records in one request"
+                },
+                "displayName": "Form",
+                "custom": {
+                  "elementName": "IntTypeFilterForm"
+                },
+                "parent": "oVx1GT12WY",
+                "hidden": false,
+                "nodes": [
+                  "InlnhiVRse"
+                ],
+                "linkedNodes": {}
+              },
+              "x_AK57FQkM": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": true,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "100%",
+                  "hidden": {
+                    "__transform": "$components.Tabs2.tabIndex != 1",
+                    "__dynamicFields": {
+                      "payload": null,
+                      "context": []
+                    },
+                    "__cacheKey": "",
+                    "__remote": false
+                  },
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {}
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container46"
+                },
+                "parent": "nK3x0wPLOs",
+                "hidden": false,
+                "nodes": [
+                  "EqnGAlbI1R"
+                ],
+                "linkedNodes": {}
+              },
+              "EqnGAlbI1R": {
+                "type": {
+                  "resolvedName": "Form"
+                },
+                "isCanvas": true,
+                "props": {
+                  "query": {
+                    "api": "Application",
+                    "model": "IntegrationConfiguration",
+                    "query": null,
+                    "dataPath": "edges[0]",
+                    "dataTransform": {
+                      "transform": null,
+                      "remote": true
+                    },
+                    "dataSubscription": {
+                      "enabled": false
+                    },
+                    "autoLoad": false
+                  },
+                  "blockNavigationWhenDirty": false,
+                  "enableConfirmOnDataChanged": false,
+                  "description": "Defines a single inbound or outbound integration endpoint, including the data flows used to process the payload and the response, and incremental-extraction state."
+                },
+                "displayName": "Form",
+                "custom": {
+                  "elementName": "IntConfigurationFilterForm"
+                },
+                "parent": "x_AK57FQkM",
+                "hidden": false,
+                "nodes": [
+                  "4QZ9R75cK_"
+                ],
+                "linkedNodes": {}
+              },
+              "4QZ9R75cK_": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 8,
+                  "margin": 1,
+                  "flexWrap": true,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "flex-start",
+                  "width": "100%",
+                  "height": "100%",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {},
+                  "background": "paper"
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container45"
+                },
+                "parent": "EqnGAlbI1R",
+                "hidden": false,
+                "nodes": [
+                  "mrKWlw63IQ",
+                  "jOVZkrnTZO",
+                  "masvVzRmTL",
+                  "vWq5Fzdds0",
+                  "GW4EFi7XpT",
+                  "rYAqHzJuhG"
+                ],
+                "linkedNodes": {}
+              },
+              "mrKWlw63IQ": {
+                "type": {
+                  "resolvedName": "ButtonsGroup"
+                },
+                "isCanvas": true,
+                "props": {
+                  "margin": 6,
+                  "width": "100%",
+                  "height": "auto"
+                },
+                "displayName": "Button Group",
+                "custom": {
+                  "elementName": "ButtonGroup5"
+                },
+                "parent": "4QZ9R75cK_",
+                "hidden": false,
+                "nodes": [
+                  "JXELnBGzoL",
+                  "vPh8qqmNbB",
+                  "u3GxqfCpXn",
+                  "iwebJnLvwC",
+                  "O__M6otDz0"
+                ],
+                "linkedNodes": {}
+              },
+              "JXELnBGzoL": {
+                "type": {
+                  "resolvedName": "ActionButton"
+                },
+                "isCanvas": false,
+                "props": {
+                  "margin": 6,
+                  "buttonColor": "primary",
+                  "width": "76px",
+                  "height": "48px",
+                  "disabled": false,
+                  "hidden": false,
+                  "useIconButton": false,
+                  "disableHover": false,
+                  "disableRipple": false,
+                  "action": [
+                    {
+                      "type": "transformation",
+                      "transformation": "$components.IntConfigurationTable.fn.search()",
+                      "remote": false
+                    }
+                  ],
+                  "icon": {
+                    "icon": "search",
+                    "variant": "duotone",
+                    "size": "icon"
+                  },
+                  "title": "Search"
+                },
+                "displayName": "Action",
+                "custom": {
+                  "elementName": "Action38"
+                },
+                "parent": "mrKWlw63IQ",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "vPh8qqmNbB": {
+                "type": {
+                  "resolvedName": "ActionButton"
+                },
+                "isCanvas": false,
+                "props": {
+                  "margin": 6,
+                  "buttonColor": "secondary",
+                  "width": "76px",
+                  "height": "48px",
+                  "disabled": false,
+                  "hidden": false,
+                  "useIconButton": false,
+                  "disableHover": false,
+                  "disableRipple": false,
+                  "action": [
+                    {
+                      "type": "screenDialog",
+                      "screenId": "manageIntegrationConfiguration",
+                      "screenName": "manageIntegrationConfiguration",
+                      "screenParams": {
+                        "mode": "Add"
+                      },
+                      "transforms": {
+                        "post": "$components.IntConfigurationTable.fn.search()"
+                      }
+                    }
+                  ],
+                  "icon": {
+                    "icon": "plus",
+                    "variant": "regular",
+                    "size": "icon"
+                  },
+                  "title": "Create"
+                },
+                "displayName": "Action",
+                "custom": {
+                  "elementName": "Action39"
+                },
+                "parent": "mrKWlw63IQ",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "u3GxqfCpXn": {
+                "type": {
+                  "resolvedName": "ActionButton"
+                },
+                "isCanvas": false,
+                "props": {
+                  "margin": 6,
+                  "buttonColor": "secondary",
+                  "width": "76px",
+                  "height": "48px",
+                  "disabled": {
+                    "__transform": "$count($components.IntConfigurationTable.selectedRows) != 1",
+                    "__dynamicFields": {
+                      "payload": [],
+                      "context": [
+                        "components.IntConfigurationTable.selectedRows"
+                      ]
+                    },
+                    "__cacheKey": "updateButton",
+                    "__remote": false
+                  },
+                  "hidden": false,
+                  "useIconButton": false,
+                  "disableHover": false,
+                  "disableRipple": false,
+                  "action": [
+                    {
+                      "type": "screenDialog",
+                      "screenParams": {
+                        "__transform": "{\n  \"id\": $components.IntConfigurationTable.selectedRows.id,\n  \"mode\": \"Edit\"\n}",
+                        "__dynamicFields": {
+                          "payload": null,
+                          "context": []
+                        },
+                        "__cacheKey": "",
+                        "__remote": false
+                      },
+                      "screenId": "manageIntegrationConfiguration",
+                      "screenName": "manageIntegrationConfiguration",
+                      "transforms": {
+                        "post": "$components.IntConfigurationTable.fn.search()"
+                      }
+                    }
+                  ],
+                  "icon": {
+                    "icon": "pencil",
+                    "variant": "duotone",
+                    "size": "icon"
+                  },
+                  "title": "Update"
+                },
+                "displayName": "Action",
+                "custom": {
+                  "elementName": "Action40"
+                },
+                "parent": "mrKWlw63IQ",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "O__M6otDz0": {
+                "type": {
+                  "resolvedName": "ActionButton"
+                },
+                "isCanvas": false,
+                "props": {
+                  "margin": 6,
+                  "buttonColor": "error",
+                  "width": "76px",
+                  "height": "48px",
+                  "disabled": {
+                    "__transform": "$count($components.IntConfigurationTable.selectedRows) = 0",
+                    "__dynamicFields": {
+                      "context": [
+                        "components.IntConfigurationTable.selectedRows"
+                      ]
+                    },
+                    "__cacheKey": "configSelectedRows",
+                    "__remote": false
+                  },
+                  "hidden": false,
+                  "useIconButton": false,
+                  "disableHover": false,
+                  "disableRipple": false,
+                  "action": [
+                    {
+                      "type": "confirmation",
+                      "buttonColor": "error",
+                      "submitIcon": {
+                        "icon": "trash",
+                        "variant": "solid"
+                      },
+                      "message": {
+                        "__transform": "\"Delete \" & ($count($components.IntConfigurationTable.selectedRows) = 1 ? (\"Integration Configuration \" & $components.IntConfigurationTable.selectedRows.id) : $count($components.IntConfigurationTable.selectedRows) & \" records\") & \"?\""
+                      }
+                    },
+                    {
+                      "type": "mutation",
+                      "api": "Application",
+                      "mutation": "mutation DeleteIntegrationConfiguration($payload: [IntegrationConfigurationDeletePayloadInput!]!) {\n  mutation: deleteIntegrationConfiguration(payload: $payload) {\n    id\n  }\n}",
+                      "transforms": {
+                        "pre": "{\n  \"payload\": $components.IntConfigurationTable.selectedRows.{\n    \"where\": {\n      \"id\": id\n    }\n  }\n}"
+                      },
+                      "message": {
+                        "__transform": "($count($components.IntConfigurationTable.selectedRows) = 1 ? (\"Integration Configuration \" & $components.IntConfigurationTable.selectedRows.id) : $count($components.IntConfigurationTable.selectedRows) & \" records\") & \" deleted successfully.\""
+                      }
+                    },
+                    {
+                      "type": "transformation",
+                      "remote": false,
+                      "transformation": "$components.IntConfigurationTable.fn.search()"
+                    }
+                  ],
+                  "icon": {
+                    "icon": "trash",
+                    "variant": "solid",
+                    "size": "icon"
+                  },
+                  "title": "Delete"
+                },
+                "displayName": "Action",
+                "custom": {
+                  "elementName": "Action41"
+                },
+                "parent": "mrKWlw63IQ",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "FMg84dESTl": {
+                "type": {
+                  "resolvedName": "ActionButton"
+                },
+                "isCanvas": false,
+                "props": {
+                  "margin": 6,
+                  "buttonColor": "primary",
+                  "width": "76px",
+                  "height": "48px",
+                  "disabled": false,
+                  "hidden": false,
+                  "useIconButton": false,
+                  "disableHover": false,
+                  "disableRipple": false,
+                  "action": [
+                    {
+                      "type": "transformation",
+                      "transformation": "$components.IntegrationTypeTable.fn.search()",
+                      "remote": false
+                    }
+                  ],
+                  "icon": {
+                    "icon": "search",
+                    "variant": "duotone",
+                    "size": "icon"
+                  },
+                  "title": "Search"
+                },
+                "displayName": "Action",
+                "custom": {
+                  "elementName": "Action1"
+                },
+                "parent": "WufYzreNGU",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "1bSf3frysX": {
+                "type": {
+                  "resolvedName": "ActionButton"
+                },
+                "isCanvas": false,
+                "props": {
+                  "margin": 6,
+                  "buttonColor": "secondary",
+                  "width": "76px",
+                  "height": "48px",
+                  "disabled": false,
+                  "hidden": false,
+                  "useIconButton": false,
+                  "disableHover": false,
+                  "disableRipple": false,
+                  "action": [
+                    {
+                      "type": "screenDialog",
+                      "screenId": "manageIntegrationType",
+                      "screenName": "manageIntegrationType",
+                      "screenParams": {
+                        "mode": "Add"
+                      },
+                      "transforms": {
+                        "post": "$components.IntegrationTypeTable.fn.search()"
+                      }
+                    }
+                  ],
+                  "icon": {
+                    "icon": "plus",
+                    "variant": "regular",
+                    "size": "icon"
+                  },
+                  "title": "Create"
+                },
+                "displayName": "Action",
+                "custom": {
+                  "elementName": "Action2"
+                },
+                "parent": "WufYzreNGU",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "SS2KlQhy9M": {
+                "type": {
+                  "resolvedName": "ActionButton"
+                },
+                "isCanvas": false,
+                "props": {
+                  "margin": 6,
+                  "buttonColor": "secondary",
+                  "width": "76px",
+                  "height": "48px",
+                  "disabled": {
+                    "__transform": "$count($components.IntegrationTypeTable.selectedRows) != 1",
+                    "__dynamicFields": {
+                      "context": [
+                        "components.IntegrationTypeTable.selectedRows"
+                      ]
+                    },
+                    "__cacheKey": "updateButton",
+                    "__remote": false
+                  },
+                  "hidden": false,
+                  "useIconButton": false,
+                  "disableHover": false,
+                  "disableRipple": false,
+                  "action": [
+                    {
+                      "type": "screenDialog",
+                      "screenParams": {
+                        "__transform": "{\n  \"id\": $components.IntegrationTypeTable.selectedRows.id,\n  \"mode\": \"Edit\"\n}",
+                        "__dynamicFields": {
+                          "payload": null,
+                          "context": []
+                        },
+                        "__cacheKey": "",
+                        "__remote": false
+                      },
+                      "screenId": "manageIntegrationType",
+                      "screenName": "manageIntegrationType",
+                      "transforms": {
+                        "post": "$components.IntegrationTypeTable.fn.search()"
+                      }
+                    }
+                  ],
+                  "icon": {
+                    "icon": "pencil",
+                    "variant": "duotone",
+                    "size": "icon"
+                  },
+                  "title": "Update"
+                },
+                "displayName": "Action",
+                "custom": {
+                  "elementName": "Action3"
+                },
+                "parent": "WufYzreNGU",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "9_YNPH05N6": {
+                "type": {
+                  "resolvedName": "ActionButton"
+                },
+                "isCanvas": false,
+                "props": {
+                  "margin": 6,
+                  "buttonColor": "error",
+                  "width": "76px",
+                  "height": "48px",
+                  "disabled": {
+                    "__transform": "$count($components.IntegrationTypeTable.selectedRows) != 1",
+                    "__dynamicFields": {
+                      "payload": [],
+                      "context": [
+                        "components.IntegrationTypeTable.selectedRows"
+                      ]
+                    },
+                    "__cacheKey": "deleteButton",
+                    "__remote": false
+                  },
+                  "hidden": false,
+                  "useIconButton": false,
+                  "disableHover": false,
+                  "disableRipple": false,
+                  "action": [
+                    {
+                      "type": "confirmation",
+                      "buttonColor": "error",
+                      "submitIcon": {
+                        "icon": "trash",
+                        "variant": "solid"
+                      },
+                      "message": {
+                        "__transform": "\"Delete \" & ($count($components.IntegrationTypeTable.selectedRows) = 1 ? (\"Integration Type \" & $components.IntegrationTypeTable.selectedRows.id) : $count($components.IntegrationTypeTable.selectedRows) & \" records\") & \"?\""
+                      }
+                    },
+                    {
+                      "type": "mutation",
+                      "api": "Application",
+                      "mutation": "mutation DeleteIntegrationType($payload: [IntegrationTypeDeletePayloadInput!]!) {\n  mutation: deleteIntegrationType(payload: $payload) {\n    id\n  }\n}",
+                      "transforms": {
+                        "pre": "{\n  \"payload\": $components.IntegrationTypeTable.selectedRows.{\n    \"where\": {\n      \"id\": id\n    }\n  }\n}"
+                      },
+                      "message": {
+                        "__transform": "($count($components.IntegrationTypeTable.selectedRows) = 1 ? (\"Integration Type \" & $components.IntegrationTypeTable.selectedRows.id) : $count($components.IntegrationTypeTable.selectedRows) & \" records\") & \" deleted successfully.\""
+                      }
+                    },
+                    {
+                      "type": "transformation",
+                      "remote": false,
+                      "transformation": "$components.IntegrationTypeTable.fn.search()"
+                    }
+                  ],
+                  "icon": {
+                    "icon": "trash",
+                    "variant": "solid",
+                    "size": "icon"
+                  },
+                  "title": "Delete"
+                },
+                "displayName": "Action",
+                "custom": {
+                  "elementName": "Action4"
+                },
+                "parent": "WufYzreNGU",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "WufYzreNGU": {
+                "type": {
+                  "resolvedName": "ButtonsGroup"
+                },
+                "isCanvas": true,
+                "props": {
+                  "margin": 6,
+                  "width": "100%",
+                  "height": "auto"
+                },
+                "displayName": "Button Group",
+                "custom": {
+                  "elementName": "ButtonGroup1"
+                },
+                "parent": "InlnhiVRse",
+                "hidden": false,
+                "nodes": [
+                  "FMg84dESTl",
+                  "1bSf3frysX",
+                  "SS2KlQhy9M",
+                  "9_YNPH05N6"
+                ],
+                "linkedNodes": {}
+              },
+              "CyEnO2eYI5": {
+                "type": {
+                  "resolvedName": "TextInput"
+                },
+                "isCanvas": false,
+                "props": {
+                  "padding": 8,
+                  "width": "100%",
+                  "height": "auto",
+                  "validation": {
+                    "required": false
+                  },
+                  "uniqueValidationEnabled": false,
+                  "visible": true,
+                  "type": "text",
+                  "label": "Integration Name",
+                  "variant": "standard",
+                  "formElement": "PurchaseOrderForm",
+                  "additionalFilter": {},
+                  "dataPath": "integrationName",
+                  "field": "integrationName",
+                  "description": "",
+                  "element": "TextInput",
+                  "predicate": "_contains",
+                  "target": {
+                    "dataPath": "integrationName._contains"
+                  }
+                },
+                "displayName": "Text",
+                "custom": {
+                  "elementName": "Text16"
+                },
+                "parent": "InlnhiVRse",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "InlnhiVRse": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 8,
+                  "margin": 1,
+                  "flexWrap": true,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "flex-start",
+                  "width": "100%",
+                  "height": "100%",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {},
+                  "background": "paper"
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container15"
+                },
+                "parent": "CUcLoEEbS-",
+                "hidden": false,
+                "nodes": [
+                  "WufYzreNGU",
+                  "CyEnO2eYI5",
+                  "FzXJ_ojyVm",
+                  "nKyD1bwDSd"
+                ],
+                "linkedNodes": {}
+              },
+              "jOVZkrnTZO": {
+                "type": {
+                  "resolvedName": "TextInput"
+                },
+                "isCanvas": false,
+                "props": {
+                  "padding": 8,
+                  "width": "100%",
+                  "height": "auto",
+                  "validation": {
+                    "required": false
+                  },
+                  "uniqueValidationEnabled": false,
+                  "visible": true,
+                  "type": "text",
+                  "label": "Name",
+                  "variant": "standard",
+                  "formElement": "Form1",
+                  "additionalFilter": {},
+                  "dataPath": "name",
+                  "field": "name",
+                  "description": "",
+                  "element": "TextInput",
+                  "predicate": "_contains",
+                  "target": {
+                    "dataPath": "name._contains"
+                  }
+                },
+                "displayName": "Text",
+                "custom": {
+                  "elementName": "Text23"
+                },
+                "parent": "4QZ9R75cK_",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "masvVzRmTL": {
+                "type": {
+                  "resolvedName": "Checkbox"
+                },
+                "isCanvas": false,
+                "props": {
+                  "padding": 8,
+                  "width": "100%",
+                  "height": "auto",
+                  "validation": {
+                    "required": false
+                  },
+                  "uniqueValidationEnabled": false,
+                  "visible": true,
+                  "type": "checkbox",
+                  "label": "Active",
+                  "formElement": "Form1",
+                  "additionalFilter": {},
+                  "dataPath": "active",
+                  "field": "active",
+                  "description": "",
+                  "element": "Checkbox",
+                  "predicate": "_eq",
+                  "target": {
+                    "dataPath": "active._eq"
+                  }
+                },
+                "displayName": "Checkbox",
+                "custom": {
+                  "elementName": "Checkbox3"
+                },
+                "parent": "4QZ9R75cK_",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "GW4EFi7XpT": {
+                "type": {
+                  "resolvedName": "SelectInput"
+                },
+                "isCanvas": false,
+                "props": {
+                  "padding": 8,
+                  "width": "100%",
+                  "height": "auto",
+                  "validation": {
+                    "required": false
+                  },
+                  "uniqueValidationEnabled": false,
+                  "visible": true,
+                  "type": "select",
+                  "label": "Integration Type",
+                  "dialogMode": "never",
+                  "multiselect": false,
+                  "isClearable": true,
+                  "selectAll": true,
+                  "searchPredicate": "contains",
+                  "api": "Application",
+                  "stateTracking": "full",
+                  "optionLimit": 5,
+                  "optionLimitFlex": 5,
+                  "alwaysReloadOptions": false,
+                  "tenantId": "",
+                  "formElement": "Form1",
+                  "additionalFilter": {},
+                  "dataPath": "integrationType",
+                  "field": "integrationType",
+                  "description": "",
+                  "element": "SelectInput",
+                  "dataModel": "IntegrationType",
+                  "labelField": "id",
+                  "labelPath": "id",
+                  "additionalFields": [
+                    "id"
+                  ],
+                  "selectFields": [
+                    "id"
+                  ],
+                  "target": {
+                    "dataPath": "integrationType.id._eq"
+                  },
+                  "predicate": "_eq",
+                  "query": {
+                    "fields": [
+                      "integrationType.id",
+                      "integrationType.id"
+                    ]
+                  }
+                },
+                "displayName": "Select",
+                "custom": {
+                  "elementName": "Select24"
+                },
+                "parent": "4QZ9R75cK_",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "rYAqHzJuhG": {
+                "type": {
+                  "resolvedName": "DateRangeInput"
+                },
+                "isCanvas": false,
+                "props": {
+                  "padding": 8,
+                  "width": "100%",
+                  "height": "auto",
+                  "validation": {
+                    "required": false
+                  },
+                  "uniqueValidationEnabled": false,
+                  "visible": true,
+                  "type": "datetimeRange",
+                  "label": "Last Transaction At",
+                  "formElement": "Form1",
+                  "additionalFilter": {},
+                  "dataPath": "lastTransactionAt",
+                  "field": "lastTransactionAt",
+                  "description": "",
+                  "element": "DateRangeInput"
+                },
+                "displayName": "Date Range",
+                "custom": {
+                  "elementName": "DateRange2"
+                },
+                "parent": "4QZ9R75cK_",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "vWq5Fzdds0": {
+                "type": {
+                  "resolvedName": "Switch"
+                },
+                "isCanvas": false,
+                "props": {
+                  "padding": 8,
+                  "width": "100%",
+                  "height": "auto",
+                  "validation": {
+                    "required": false
+                  },
+                  "uniqueValidationEnabled": false,
+                  "visible": true,
+                  "type": "switch",
+                  "label": "Inbound",
+                  "target": {
+                    "dataPath": null
+                  },
+                  "dataPath": "isInbound",
+                  "formElement": "IntConfigurationFilterForm",
+                  "labelLeft": "Outbound"
+                },
+                "displayName": "Switch",
+                "custom": {
+                  "elementName": "Switch7"
+                },
+                "parent": "4QZ9R75cK_",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "BLweWRUWPy": {
+                "type": {
+                  "resolvedName": "TabBar"
+                },
+                "isCanvas": false,
+                "props": {
+                  "width": "100%",
+                  "height": "auto",
+                  "orientation": "horizontal",
+                  "justifyTabs": "start",
+                  "tabWidth": 160,
+                  "hidden": false,
+                  "tabActiveColor": "primary",
+                  "alwaysKeepTabsMounted": false,
+                  "tabs": [
+                    {
+                      "tabId": 0,
+                      "tabTitle": "Integration Type Setup"
+                    },
+                    {
+                      "tabId": 2,
+                      "tabTitle": "Integration Configuration"
+                    }
+                  ]
+                },
+                "displayName": "Tabs",
+                "custom": {
+                  "elementName": "Tabs2"
+                },
+                "parent": "ROOT",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {
+                  "undefinedDetail0": "Qq979HXOCk",
+                  "Tabs2Detail2": "P7dTMRtDtE",
+                  "Tabs2Detail0": "zs60gHelTJ",
+                  "Tabs1Detail2": "OEcKVMcpPB",
+                  "Tabs1Detail0": "5_YLxbPhPm"
+                }
+              },
+              "Qq979HXOCk": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": true,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "100%",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {},
+                  "lockSize": true
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "undefinedDetail0"
+                },
+                "parent": "BLweWRUWPy",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "P7dTMRtDtE": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": true,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "100%",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {},
+                  "lockSize": true
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Tabs2Detail2"
+                },
+                "parent": "BLweWRUWPy",
+                "hidden": false,
+                "nodes": [
+                  "Kae70EuBUK"
+                ],
+                "linkedNodes": {}
+              },
+              "zs60gHelTJ": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": true,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "100%",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {},
+                  "lockSize": true
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Tabs1Detail0"
+                },
+                "parent": "BLweWRUWPy",
+                "hidden": false,
+                "nodes": [
+                  "qMj1BeMx2w"
+                ],
+                "linkedNodes": {}
+              },
+              "qMj1BeMx2w": {
+                "type": {
+                  "resolvedName": "Table"
+                },
+                "isCanvas": true,
+                "props": {
+                  "margin": 1,
+                  "width": "100%",
+                  "height": "auto",
+                  "flexGrow": true,
+                  "query": {
+                    "api": "Application",
+                    "model": "IntegrationType",
+                    "query": null,
+                    "dataPath": "edges",
+                    "dataTransform": {
+                      "transform": "(\n  $data := edges.node;\n  $data ~> |$|{\"app\": $join([appMes ? \"MES\" , appWms ? \"WMS\", appQms ? \"QMS\", appCmms ? \"CMMS\"],\", \")}|\n)",
+                      "remote": true
+                    },
+                    "dataSubscription": {
+                      "enabled": false
+                    },
+                    "autoLoad": true,
+                    "fields": [
+                      "id",
+                      "appWms",
+                      "appMes",
+                      "appQms",
+                      "appCmms"
+                    ]
+                  },
+                  "selectable": "single",
+                  "showToolPanels": true,
+                  "showStatusBar": false,
+                  "enableGrouping": true,
+                  "enableCharts": true,
+                  "showColumnMenu": true,
+                  "enableRowDragging": false,
+                  "disableColumnDragging": false,
+                  "disableDragLeaveHidesColumns": false,
+                  "masterDetail": false,
+                  "hideTableHeader": false,
+                  "filterFormName": "IntTypeFilterForm",
+                  "description": "Count of maximum number of records in one request",
+                  "rowMultiSelectWithClick": false,
+                  "limitToOneActiveDetail": false,
+                  "views": [
+                    {
+                      "unique": false,
+                      "fields": [],
+                      "name": "Default",
+                      "rowLimit": 500,
+                      "isDefault": true,
+                      "columns": [
+                        {
+                          "id": "TableColumn168",
+                          "label": "Integration Name"
+                        },
+                        {
+                          "id": "TableColumn194",
+                          "label": "FUUZ Apps"
+                        },
+                        {
+                          "id": "TableColumn169",
+                          "label": "Concurrency Limit"
+                        },
+                        {
+                          "id": "TableColumn170",
+                          "label": "Max Records Limit"
+                        },
+                        {
+                          "id": "TableColumn171",
+                          "label": "Request Interval"
+                        },
+                        {
+                          "id": "TableColumn193",
+                          "label": "Tenant ID"
+                        },
+                        {
+                          "id": "TableColumn172",
+                          "label": "Connection Name"
+                        },
+                        {
+                          "id": "TableColumn191",
+                          "label": "ERP Facility ID"
+                        },
+                        {
+                          "id": "TableColumn192",
+                          "label": "ERP Subsidiary ID"
+                        },
+                        {
+                          "id": "TableColumn195",
+                          "label": "Scoped Apps"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "displayName": "Table",
+                "custom": {
+                  "elementName": "IntegrationTypeTable"
+                },
+                "parent": "zs60gHelTJ",
+                "hidden": false,
+                "nodes": [
+                  "qyoQXjRYqQ",
+                  "e7aaun8pBP",
+                  "KWIyutqFE0",
+                  "37uc_2hU8q",
+                  "DTUjs3hbAx",
+                  "D0cUyhiRMB",
+                  "EyAwIcfJ0I",
+                  "M1JJwp3Bf6",
+                  "OwWMb99sCJ",
+                  "SuXpHm6NsS",
+                  "o8l0NFT-fR"
+                ],
+                "linkedNodes": {}
+              },
+              "qyoQXjRYqQ": {
+                "type": {
+                  "resolvedName": "TableColumn"
+                },
+                "isCanvas": false,
+                "props": {
+                  "label": "Id",
+                  "format": "text",
+                  "sortable": true,
+                  "field": "id",
+                  "dataPath": "id",
+                  "description": "The primary unique ID of the record.  Every model should have an id field."
+                },
+                "displayName": "Table Column",
+                "custom": {
+                  "elementName": "TableColumn167"
+                },
+                "parent": "qMj1BeMx2w",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "e7aaun8pBP": {
+                "type": {
+                  "resolvedName": "TableColumn"
+                },
+                "isCanvas": false,
+                "props": {
+                  "label": "Integration Name",
+                  "format": "text",
+                  "sortable": true,
+                  "field": "integrationName",
+                  "dataPath": "integrationName",
+                  "description": ""
+                },
+                "displayName": "Table Column",
+                "custom": {
+                  "elementName": "TableColumn168"
+                },
+                "parent": "qMj1BeMx2w",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "EyAwIcfJ0I": {
+                "type": {
+                  "resolvedName": "TableColumn"
+                },
+                "isCanvas": false,
+                "props": {
+                  "label": "Concurrency Limit",
+                  "format": "integer",
+                  "sortable": true,
+                  "field": "concurrencyLimit",
+                  "dataPath": "concurrencyLimit",
+                  "description": "Number of simultaneous request allowed"
+                },
+                "displayName": "Table Column",
+                "custom": {
+                  "elementName": "TableColumn169"
+                },
+                "parent": "qMj1BeMx2w",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "M1JJwp3Bf6": {
+                "type": {
+                  "resolvedName": "TableColumn"
+                },
+                "isCanvas": false,
+                "props": {
+                  "label": "Max Records Limit",
+                  "format": "integer",
+                  "sortable": true,
+                  "field": "maxRecordsLimit",
+                  "dataPath": "maxRecordsLimit",
+                  "description": "Count of maximum number of processed in a request"
+                },
+                "displayName": "Table Column",
+                "custom": {
+                  "elementName": "TableColumn170"
+                },
+                "parent": "qMj1BeMx2w",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "OwWMb99sCJ": {
+                "type": {
+                  "resolvedName": "TableColumn"
+                },
+                "isCanvas": false,
+                "props": {
+                  "label": "Request Interval",
+                  "format": "integer",
+                  "sortable": true,
+                  "field": "requestInterval",
+                  "dataPath": "requestInterval",
+                  "description": "Time inteval between requests in milliSeconds if applicable\n\n"
+                },
+                "displayName": "Table Column",
+                "custom": {
+                  "elementName": "TableColumn171"
+                },
+                "parent": "qMj1BeMx2w",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "DTUjs3hbAx": {
+                "type": {
+                  "resolvedName": "TableColumn"
+                },
+                "isCanvas": false,
+                "props": {
+                  "label": "Connection",
+                  "format": "text",
+                  "sortable": true,
+                  "field": "connection.name",
+                  "dataPath": "connection.name",
+                  "description": "The name of the Connection."
+                },
+                "displayName": "Table Column",
+                "custom": {
+                  "elementName": "TableColumn172"
+                },
+                "parent": "qMj1BeMx2w",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "Kae70EuBUK": {
+                "type": {
+                  "resolvedName": "Table"
+                },
+                "isCanvas": true,
+                "props": {
+                  "margin": 1,
+                  "width": "100%",
+                  "height": "auto",
+                  "flexGrow": true,
+                  "query": {
+                    "api": "Application",
+                    "model": "IntegrationConfiguration",
+                    "query": null,
+                    "dataPath": "edges",
+                    "dataTransform": {
+                      "transform": null,
+                      "remote": true
+                    },
+                    "dataSubscription": {
+                      "enabled": false
+                    },
+                    "autoLoad": true,
+                    "fields": [
+                      "id",
+                      "integrationTypeId"
+                    ]
+                  },
+                  "selectable": "multiple",
+                  "showToolPanels": true,
+                  "showStatusBar": false,
+                  "enableGrouping": true,
+                  "enableCharts": true,
+                  "showColumnMenu": true,
+                  "enableRowDragging": false,
+                  "disableColumnDragging": false,
+                  "disableDragLeaveHidesColumns": false,
+                  "masterDetail": false,
+                  "hideTableHeader": false,
+                  "filterFormName": "IntConfigurationFilterForm",
+                  "description": "",
+                  "rowMultiSelectWithClick": true,
+                  "limitToOneActiveDetail": false
+                },
+                "displayName": "Table",
+                "custom": {
+                  "elementName": "IntConfigurationTable"
+                },
+                "parent": "P7dTMRtDtE",
+                "hidden": false,
+                "nodes": [
+                  "yAA39vWwQp",
+                  "wlTzAfeBkH",
+                  "OBUbQHU05Z",
+                  "hy4iZ3ui8R",
+                  "hfrLutIW8P",
+                  "macF7mSXs7",
+                  "bSfQueOfy8",
+                  "hkFDcbhsl7",
+                  "014-nRDstz",
+                  "XygtpGAh_b",
+                  "2xasloFnWy",
+                  "P4t9iLB8Nx",
+                  "82Z0aS0keC",
+                  "GBZX5PQxDX",
+                  "f-VbfqXYcw"
+                ],
+                "linkedNodes": {}
+              },
+              "yAA39vWwQp": {
+                "type": {
+                  "resolvedName": "TableColumn"
+                },
+                "isCanvas": false,
+                "props": {
+                  "label": "ID",
+                  "format": "text",
+                  "sortable": true,
+                  "field": "id",
+                  "dataPath": "id",
+                  "description": "The primary unique ID of the record.  Every model should have an id field."
+                },
+                "displayName": "Table Column",
+                "custom": {
+                  "elementName": "TableColumn173"
+                },
+                "parent": "Kae70EuBUK",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "wlTzAfeBkH": {
+                "type": {
+                  "resolvedName": "TableColumn"
+                },
+                "isCanvas": false,
+                "props": {
+                  "label": "Name",
+                  "format": "text",
+                  "sortable": true,
+                  "field": "name",
+                  "dataPath": "name",
+                  "description": ""
+                },
+                "displayName": "Table Column",
+                "custom": {
+                  "elementName": "TableColumn174"
+                },
+                "parent": "Kae70EuBUK",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "OBUbQHU05Z": {
+                "type": {
+                  "resolvedName": "TableColumn"
+                },
+                "isCanvas": false,
+                "props": {
+                  "label": "Active",
+                  "format": "checkmark",
+                  "sortable": true,
+                  "field": "active",
+                  "dataPath": "active",
+                  "description": ""
+                },
+                "displayName": "Table Column",
+                "custom": {
+                  "elementName": "TableColumn175"
+                },
+                "parent": "Kae70EuBUK",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "hy4iZ3ui8R": {
+                "type": {
+                  "resolvedName": "TableColumn"
+                },
+                "isCanvas": false,
+                "props": {
+                  "label": "Is Inbound",
+                  "format": "checkmark",
+                  "sortable": true,
+                  "field": "isInbound",
+                  "dataPath": "isInbound",
+                  "description": ""
+                },
+                "displayName": "Table Column",
+                "custom": {
+                  "elementName": "TableColumn176"
+                },
+                "parent": "Kae70EuBUK",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "hfrLutIW8P": {
+                "type": {
+                  "resolvedName": "TableColumn"
+                },
+                "isCanvas": false,
+                "props": {
+                  "label": "Integration Type",
+                  "format": "text",
+                  "sortable": true,
+                  "field": "integrationType.integrationName",
+                  "dataPath": "integrationType.integrationName",
+                  "description": "",
+                  "query": {}
+                },
+                "displayName": "Table Column",
+                "custom": {
+                  "elementName": "TableColumn177"
+                },
+                "parent": "Kae70EuBUK",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "bSfQueOfy8": {
+                "type": {
+                  "resolvedName": "TableColumn"
+                },
+                "isCanvas": false,
+                "props": {
+                  "label": "Auto Retry Responses",
+                  "format": "json",
+                  "sortable": true,
+                  "field": "autoRetryResponses",
+                  "dataPath": "autoRetryResponses",
+                  "description": ""
+                },
+                "displayName": "Table Column",
+                "custom": {
+                  "elementName": "TableColumn181"
+                },
+                "parent": "Kae70EuBUK",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "hkFDcbhsl7": {
+                "type": {
+                  "resolvedName": "TableColumn"
+                },
+                "isCanvas": false,
+                "props": {
+                  "label": "Request Handler Data Flow",
+                  "format": "text",
+                  "sortable": true,
+                  "field": "requestHandlerDataFlow.name",
+                  "dataPath": "requestHandlerDataFlow.name",
+                  "description": "The name of the Data Flow."
+                },
+                "displayName": "Table Column",
+                "custom": {
+                  "elementName": "TableColumn183"
+                },
+                "parent": "Kae70EuBUK",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "014-nRDstz": {
+                "type": {
+                  "resolvedName": "TableColumn"
+                },
+                "isCanvas": false,
+                "props": {
+                  "label": "Integration Data Flow",
+                  "format": "text",
+                  "sortable": true,
+                  "field": "integrationDataFlow.name",
+                  "dataPath": "integrationDataFlow.name",
+                  "description": "The name of the Data Flow."
+                },
+                "displayName": "Table Column",
+                "custom": {
+                  "elementName": "TableColumn184"
+                },
+                "parent": "Kae70EuBUK",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "XygtpGAh_b": {
+                "type": {
+                  "resolvedName": "TableColumn"
+                },
+                "isCanvas": false,
+                "props": {
+                  "label": "Response Data Flow",
+                  "format": "text",
+                  "sortable": true,
+                  "field": "responseDataFlow.name",
+                  "dataPath": "responseDataFlow.name",
+                  "description": "The name of the Data Flow."
+                },
+                "displayName": "Table Column",
+                "custom": {
+                  "elementName": "TableColumn185"
+                },
+                "parent": "Kae70EuBUK",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "2xasloFnWy": {
+                "type": {
+                  "resolvedName": "TableColumn"
+                },
+                "isCanvas": false,
+                "props": {
+                  "label": "Last Transaction At",
+                  "format": "datetime",
+                  "sortable": true,
+                  "field": "lastTransactionAt",
+                  "dataPath": "lastTransactionAt",
+                  "description": ""
+                },
+                "displayName": "Table Column",
+                "custom": {
+                  "elementName": "TableColumn186"
+                },
+                "parent": "Kae70EuBUK",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "P4t9iLB8Nx": {
+                "type": {
+                  "resolvedName": "TableColumn"
+                },
+                "isCanvas": false,
+                "props": {
+                  "label": "Latest Record ID",
+                  "format": "text",
+                  "sortable": true,
+                  "field": "latestRecordId",
+                  "dataPath": "latestRecordId",
+                  "description": ""
+                },
+                "displayName": "Table Column",
+                "custom": {
+                  "elementName": "TableColumn187"
+                },
+                "parent": "Kae70EuBUK",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "82Z0aS0keC": {
+                "type": {
+                  "resolvedName": "TableColumn"
+                },
+                "isCanvas": false,
+                "props": {
+                  "label": "Saved Script ID",
+                  "format": "text",
+                  "sortable": true,
+                  "field": "savedScriptId",
+                  "dataPath": "savedScriptId",
+                  "description": ""
+                },
+                "displayName": "Table Column",
+                "custom": {
+                  "elementName": "TableColumn188"
+                },
+                "parent": "Kae70EuBUK",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "GBZX5PQxDX": {
+                "type": {
+                  "resolvedName": "TableColumn"
+                },
+                "isCanvas": false,
+                "props": {
+                  "label": "Max Records",
+                  "format": "text",
+                  "sortable": true,
+                  "dataPath": "maxRecords"
+                },
+                "displayName": "Table Column",
+                "custom": {
+                  "elementName": "TableColumn189"
+                },
+                "parent": "Kae70EuBUK",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "f-VbfqXYcw": {
+                "type": {
+                  "resolvedName": "TableColumn"
+                },
+                "isCanvas": false,
+                "props": {
+                  "label": "Parameters",
+                  "format": "json",
+                  "sortable": true,
+                  "dataPath": "parameters",
+                  "description": "",
+                  "query": {},
+                  "field": "parameters"
+                },
+                "displayName": "Table Column",
+                "custom": {
+                  "elementName": "TableColumn190"
+                },
+                "parent": "Kae70EuBUK",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "o8l0NFT-fR": {
+                "type": {
+                  "resolvedName": "TableColumn"
+                },
+                "isCanvas": false,
+                "props": {
+                  "label": "Site ID",
+                  "format": "text",
+                  "sortable": true,
+                  "field": "siteId",
+                  "dataPath": "siteId",
+                  "description": "External ERP facility/location/plant/site identifier mapped to this tenant configuration.",
+                  "query": {
+                    "fields": []
+                  }
+                },
+                "displayName": "Table Column",
+                "custom": {
+                  "elementName": "TableColumn191"
+                },
+                "parent": "qMj1BeMx2w",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "SuXpHm6NsS": {
+                "type": {
+                  "resolvedName": "TableColumn"
+                },
+                "isCanvas": false,
+                "props": {
+                  "label": "Enterprise ID",
+                  "format": "text",
+                  "sortable": true,
+                  "field": "enterpriseId",
+                  "dataPath": "enterpriseId",
+                  "description": "External ERP subsidiary/entitiy/company identifier mapped to this tenant configuration.",
+                  "query": {
+                    "fields": []
+                  }
+                },
+                "displayName": "Table Column",
+                "custom": {
+                  "elementName": "TableColumn192"
+                },
+                "parent": "qMj1BeMx2w",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "D0cUyhiRMB": {
+                "type": {
+                  "resolvedName": "TableColumn"
+                },
+                "isCanvas": false,
+                "props": {
+                  "label": "Tenant ID",
+                  "format": "text",
+                  "sortable": true,
+                  "field": "tenantId",
+                  "dataPath": "tenantId",
+                  "description": "Identifier of the tenant this configuration belongs to. This should be exact tenantId of the tenant",
+                  "query": {}
+                },
+                "displayName": "Table Column",
+                "custom": {
+                  "elementName": "TableColumn193"
+                },
+                "parent": "qMj1BeMx2w",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "KWIyutqFE0": {
+                "type": {
+                  "resolvedName": "TableColumn"
+                },
+                "isCanvas": false,
+                "props": {
+                  "label": "FUUZ Apps",
+                  "format": "checkmark",
+                  "sortable": true,
+                  "field": "fuuzApps",
+                  "dataPath": "fuuzApps",
+                  "description": "Flag to differentiate if the integration is to a FUUZ App",
+                  "query": {},
+                  "width": "auto"
+                },
+                "displayName": "Table Column",
+                "custom": {
+                  "elementName": "TableColumn194"
+                },
+                "parent": "qMj1BeMx2w",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "FzXJ_ojyVm": {
+                "type": {
+                  "resolvedName": "TextInput"
+                },
+                "isCanvas": false,
+                "props": {
+                  "padding": 8,
+                  "width": "100%",
+                  "height": "auto",
+                  "validation": {
+                    "required": false
+                  },
+                  "uniqueValidationEnabled": false,
+                  "visible": true,
+                  "type": "text",
+                  "label": "Site ID",
+                  "variant": "standard",
+                  "formElement": "PurchaseOrderForm",
+                  "additionalFilter": {},
+                  "dataPath": "siteId",
+                  "field": "siteId",
+                  "description": "External ERP facility/location/plant/site identifier mapped to this tenant configuration.",
+                  "element": "TextInput",
+                  "predicate": "_contains",
+                  "target": {
+                    "dataPath": "siteId._contains"
+                  }
+                },
+                "displayName": "Text",
+                "custom": {
+                  "elementName": "Text28"
+                },
+                "parent": "InlnhiVRse",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "nKyD1bwDSd": {
+                "type": {
+                  "resolvedName": "TextInput"
+                },
+                "isCanvas": false,
+                "props": {
+                  "padding": 8,
+                  "width": "100%",
+                  "height": "auto",
+                  "validation": {
+                    "required": false
+                  },
+                  "uniqueValidationEnabled": false,
+                  "visible": true,
+                  "type": "text",
+                  "label": "Tenant ID",
+                  "variant": "standard",
+                  "formElement": "PurchaseOrderForm",
+                  "additionalFilter": {},
+                  "dataPath": "tenantId",
+                  "field": "tenantId",
+                  "description": "Identifier of the tenant this configuration belongs to. This should be exact tenantId of the tenant",
+                  "element": "TextInput",
+                  "predicate": "_contains",
+                  "target": {
+                    "dataPath": "tenantId._contains"
+                  }
+                },
+                "displayName": "Text",
+                "custom": {
+                  "elementName": "Text29"
+                },
+                "parent": "InlnhiVRse",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "37uc_2hU8q": {
+                "type": {
+                  "resolvedName": "TableColumn"
+                },
+                "isCanvas": false,
+                "props": {
+                  "label": "Scoped Apps",
+                  "format": "text",
+                  "sortable": true,
+                  "field": "erpSubsidiaryId",
+                  "dataPath": "app",
+                  "description": "Scoped Apps for the tenant (Applicable for FUUZ App integration)",
+                  "query": {
+                    "fields": []
+                  },
+                  "width": "auto"
+                },
+                "displayName": "Table Column",
+                "custom": {
+                  "elementName": "TableColumn195"
+                },
+                "parent": "qMj1BeMx2w",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "OEcKVMcpPB": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": true,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "100%",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {},
+                  "lockSize": true
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Tabs1Detail2"
+                },
+                "parent": "BLweWRUWPy",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "5_YLxbPhPm": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": true,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "100%",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {},
+                  "lockSize": true
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Tabs1Detail0"
+                },
+                "parent": "BLweWRUWPy",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "macF7mSXs7": {
+                "type": {
+                  "resolvedName": "TableColumn"
+                },
+                "isCanvas": false,
+                "props": {
+                  "label": "Scoped Data Model",
+                  "format": "text",
+                  "sortable": true,
+                  "field": "scopedDataModel.name",
+                  "dataPath": "scopedDataModel.name",
+                  "description": "The name of the Data Model.",
+                  "query": {
+                    "fields": [
+                      "scopedDataModel.id",
+                      "scopedDataModel.name"
+                    ]
+                  }
+                },
+                "displayName": "Table Column",
+                "custom": {
+                  "elementName": "TableColumn196"
+                },
+                "parent": "Kae70EuBUK",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "iwebJnLvwC": {
+                "type": {
+                  "resolvedName": "ActionButton"
+                },
+                "isCanvas": false,
+                "props": {
+                  "margin": 6,
+                  "buttonColor": "secondary",
+                  "width": "76px",
+                  "height": "48px",
+                  "disabled": {
+                    "__transform": "(\n  $rows := $components.IntConfigurationTable.selectedRows;\n  $not($count($rows) > 1 and $count($distinct($rows.integrationTypeId)) = 1)\n)",
+                    "__dynamicFields": {
+                      "context": [
+                        "components.IntConfigurationTable.selectedRows"
+                      ]
+                    },
+                    "__cacheKey": "configSelectedRows",
+                    "__remote": false
+                  },
+                  "hidden": false,
+                  "useIconButton": false,
+                  "disableHover": false,
+                  "disableRipple": false,
+                  "action": [
+                    {
+                      "type": "form",
+                      "submitIcon": "save",
+                      "title": {
+                        "__transform": "\"Mass Update Integration Configuration \" & $components.Table1.selectedRows[0].id"
+                      },
+                      "fields": [
+                        {
+                          "label": "Active",
+                          "uniqueValidationEnabled": false,
+                          "validation": {
+                            "required": false
+                          },
+                          "dataPath": "active",
+                          "field": "active",
+                          "description": "",
+                          "element": "Checkbox",
+                          "type": "checkbox"
+                        },
+                        {
+                          "label": "Inbound",
+                          "uniqueValidationEnabled": false,
+                          "validation": {
+                            "required": false
+                          },
+                          "dataPath": "isInbound",
+                          "field": "isInbound",
+                          "description": "",
+                          "element": "Switch",
+                          "type": "switch",
+                          "labelLeft": "Outbound"
+                        },
+                        {
+                          "label": "Auto Retry Responses",
+                          "uniqueValidationEnabled": false,
+                          "validation": {
+                            "required": false
+                          },
+                          "dataPath": "autoRetryResponses",
+                          "field": "autoRetryResponses",
+                          "description": "",
+                          "element": "JSONInput",
+                          "type": "json"
+                        },
+                        {
+                          "label": "Parameters",
+                          "uniqueValidationEnabled": false,
+                          "validation": {
+                            "required": false
+                          },
+                          "dataPath": "parameters",
+                          "field": "parameters",
+                          "description": "",
+                          "element": "JSONInput",
+                          "type": "json"
+                        },
+                        {
+                          "label": "Integration Type",
+                          "uniqueValidationEnabled": false,
+                          "validation": {
+                            "required": false
+                          },
+                          "dataPath": "integrationType",
+                          "field": "integrationType",
+                          "description": "",
+                          "element": "SelectInput",
+                          "type": "select",
+                          "api": "Application",
+                          "dataModel": "IntegrationType",
+                          "labelField": "id",
+                          "labelPath": "id",
+                          "additionalFields": [
+                            "id"
+                          ],
+                          "selectFields": [
+                            "id"
+                          ],
+                          "target": {
+                            "dataPath": "integrationTypeId"
+                          },
+                          "linkTarget": null,
+                          "query": {
+                            "fields": [
+                              "integrationType.id",
+                              "integrationType.id"
+                            ]
+                          }
+                        },
+                        {
+                          "label": "Request Handler Data Flow",
+                          "uniqueValidationEnabled": false,
+                          "validation": {
+                            "required": false
+                          },
+                          "dataPath": "requestHandlerDataFlow",
+                          "field": "requestHandlerDataFlow",
+                          "description": "",
+                          "element": "SelectInput",
+                          "type": "select",
+                          "api": "Application",
+                          "dataModel": "DataFlow",
+                          "labelField": "name",
+                          "labelPath": "name",
+                          "additionalFields": [
+                            "name"
+                          ],
+                          "selectFields": [
+                            "name"
+                          ],
+                          "target": {
+                            "dataPath": "requestHandlerDataFlowId"
+                          },
+                          "linkTarget": null,
+                          "query": {
+                            "fields": [
+                              "requestHandlerDataFlow.id",
+                              "requestHandlerDataFlow.name"
+                            ]
+                          }
+                        },
+                        {
+                          "label": "Integration Data Flow",
+                          "uniqueValidationEnabled": false,
+                          "validation": {
+                            "required": false
+                          },
+                          "dataPath": "integrationDataFlow",
+                          "field": "integrationDataFlow",
+                          "description": "",
+                          "element": "SelectInput",
+                          "type": "select",
+                          "api": "Application",
+                          "dataModel": "DataFlow",
+                          "labelField": "name",
+                          "labelPath": "name",
+                          "additionalFields": [
+                            "name"
+                          ],
+                          "selectFields": [
+                            "name"
+                          ],
+                          "target": {
+                            "dataPath": "integrationDataFlowId"
+                          },
+                          "linkTarget": null,
+                          "query": {
+                            "fields": [
+                              "integrationDataFlow.id",
+                              "integrationDataFlow.name"
+                            ]
+                          }
+                        },
+                        {
+                          "label": "Response Data Flow",
+                          "uniqueValidationEnabled": false,
+                          "validation": {
+                            "required": false
+                          },
+                          "dataPath": "responseDataFlow",
+                          "field": "responseDataFlow",
+                          "description": "",
+                          "element": "SelectInput",
+                          "type": "select",
+                          "api": "Application",
+                          "dataModel": "DataFlow",
+                          "labelField": "name",
+                          "labelPath": "name",
+                          "additionalFields": [
+                            "name"
+                          ],
+                          "selectFields": [
+                            "name"
+                          ],
+                          "target": {
+                            "dataPath": "responseDataFlowId"
+                          },
+                          "linkTarget": null,
+                          "query": {
+                            "fields": [
+                              "responseDataFlow.id",
+                              "responseDataFlow.name"
+                            ]
+                          }
+                        },
+                        {
+                          "label": "Last Transaction At",
+                          "uniqueValidationEnabled": false,
+                          "validation": {
+                            "required": false
+                          },
+                          "dataPath": "lastTransactionAt",
+                          "field": "lastTransactionAt",
+                          "description": "",
+                          "element": "DateTimeInput",
+                          "type": "datetime"
+                        },
+                        {
+                          "label": "Max Records Limit",
+                          "uniqueValidationEnabled": false,
+                          "validation": {
+                            "required": false
+                          },
+                          "dataPath": "maxRecords",
+                          "field": "maxRecord",
+                          "description": "Count of maximum number of processed in a request",
+                          "element": "IntegerInput",
+                          "type": "integer"
+                        },
+                        {
+                          "label": "Max Retry Attempts",
+                          "uniqueValidationEnabled": false,
+                          "validation": {
+                            "required": false
+                          },
+                          "dataPath": "maxRetryAttemps",
+                          "field": "maxRetryAttemps",
+                          "description": "Maximum number of times a failed record under this configuration is automatically retried before it stops being reprocessed and is left in a errored state.",
+                          "element": "IntegerInput",
+                          "type": "integer"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "confirmation",
+                      "message": {
+                        "__transform": "\"Do you confirm to update the new value to the selected records?\""
+                      },
+                      "submitIcon": {
+                        "icon": "check",
+                        "color": "inherit",
+                        "variant": "duotone",
+                        "size": "icon"
+                      },
+                      "buttonColor": "green",
+                      "data": {
+                        "__transform": ""
+                      }
+                    },
+                    {
+                      "type": "mutation",
+                      "api": "Application",
+                      "mutation": "mutation UpdateIntegrationConfiguration($payload: [IntegrationConfigurationUpdatePayloadInput!]!) {\n  mutation: updateIntegrationConfiguration(payload: $payload) {\n    id\n  }\n}",
+                      "transforms": {
+                        "pre": "{\n  \"payload\": $components.IntConfigurationTable.selectedRows.{\n    \"where\": {\n      \"id\": id\n    },\n    \"update\": $$.data.$sift(function($v, $k) {$isNotNilOrEmpty($v) or $isArray($v)})\n  }\n}",
+                        "post": "$components.IntConfigurationTable.fn.search()"
+                      },
+                      "message": {
+                        "__transform": "($count($components.IntConfigurationTable.selectedRows) = 1 ? (\"Integration Configuration \" & $components.IntConfigurationTable.selectedRows.id) : $count($components.IntConfigurationTable.selectedRows) & \" records\") & \" updated successfully.\""
+                      }
+                    }
+                  ],
+                  "icon": {
+                    "icon": "pen-field",
+                    "color": "inherit",
+                    "variant": "regular",
+                    "size": "icon"
+                  }
+                },
+                "displayName": "Action",
+                "custom": {
+                  "elementName": "Action47"
+                },
+                "parent": "mrKWlw63IQ",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "routes": [
+    {
+      "id": "cmd8xlm930l9a014jf5ca7onq",
+      "title": "Integration Setup",
+      "path": "/system/integration/integrationSetup",
+      "moduleId": "integration",
+      "screenId": "integrationSetup",
+      "isMenuAccessible": true,
+      "submenu": ""
+    }
+  ]
+}

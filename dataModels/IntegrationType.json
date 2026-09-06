@@ -1,0 +1,506 @@
+{
+  "header": {
+    "id": "integrationType",
+    "name": "IntegrationType",
+    "description": "Count of maximum number of records in one request",
+    "dataModelKindId": "reference",
+    "_customFields": {
+      "_externalId": null
+    }
+  },
+  "version": {
+    "id": "cmraon0pl016d016t2c2k7ypd",
+    "number": "6",
+    "dataModelId": "integrationType",
+    "modelDefinition": {
+      "name": "IntegrationType",
+      "metadata": {
+        "mfgx": {
+          "module": {
+            "id": "integration",
+            "group": {
+              "id": "system"
+            }
+          },
+          "exposed": true,
+          "mutable": true,
+          "mutations": {
+            "create": true,
+            "update": true,
+            "del": true
+          },
+          "dataChangeCapture": {
+            "exposed": true,
+            "retentionDays": 120
+          },
+          "customFields": {
+            "exposed": true
+          },
+          "editor": {
+            "autosort": false
+          },
+          "triggers": {
+            "create": "(\n  $after.fuuzApps = true ? (\n    $validate := [$isNilOrEmpty($after.appMes) ? \"appMes\" , $isNilOrEmpty($after.appWms) ? \"appWms\", $isNilOrEmpty($after.appCmms) ? \"appCmms\", $isNilOrEmpty($after.appQms) ? \"appQms\", $isNilOrEmpty($after.tenantId) ? \"tenantId\"];\n    $isNotNilOrEmpty($validate) ? $throw(\"Missing \" & $join($validate, \", \") & \" field(s) value!\", { \"moreDetail\": true }) : $merge([$, { \"id\": $after.integrationName }])\n  )\n  : $merge([$, { \"id\": $after.integrationName }])\n)",
+            "update": "(\n  $after.fuuzApps = true ? (\n    $validate := [$isNilOrEmpty($after.appMes) ? \"appMes\" , $isNilOrEmpty($after.appWms) ? \"appWms\", $isNilOrEmpty($after.appCmms) ? \"appCmms\", $isNilOrEmpty($after.appQms) ? \"appQms\", $isNilOrEmpty($after.tenantId) ? \"tenantId\"];\n    $isNotNilOrEmpty($validate) ? $throw(\"Cannot set null for the \" & $join($validate, \", \") & \" field(s) value!\", { \"moreDetail\": true }) : $after\n  )\n  : $after\n)"
+          }
+        },
+        "mongo": {
+          "collection": "integrationType"
+        },
+        "graphql": {
+          "type": "Object"
+        }
+      },
+      "kind": "Reference",
+      "fields": [
+        {
+          "name": "id",
+          "type": "ID!",
+          "description": "The primary unique ID of the record.  Every model should have an id field.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": false
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": true
+          }
+        },
+        {
+          "name": "integrationName",
+          "type": "String!",
+          "description": "",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": false
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": true
+          }
+        },
+        {
+          "name": "concurrencyLimit",
+          "type": "Int",
+          "description": "Number of simultaneous request allowed",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              },
+              "defaultValue": 0
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "maxRecordsLimit",
+          "type": "Int",
+          "description": "Count of maximum number of processed in a request",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "requestInterval",
+          "type": "Int",
+          "description": "Time inteval between requests in milliSeconds if applicable\n\n",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "fuuzApps",
+          "description": "Flag to differentiate if the integration is to a FUUZ App",
+          "type": "Boolean!",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "connectionId",
+          "type": "ID!",
+          "description": "Connection used to reach the application tenants.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "connection",
+          "description": "",
+          "type": "Connection",
+          "metadata": {
+            "mfgx": {
+              "relation": {
+                "fields": {
+                  "from": "connectionId",
+                  "to": "id"
+                }
+              },
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "appMes",
+          "description": "Whether the MES application is enabled for this tenant configuration.",
+          "type": "Boolean",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "appWms",
+          "description": "Whether the WMS application is enabled for this tenant configuration.",
+          "type": "Boolean",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "appCmms",
+          "description": "Whether the CMMS application is enabled for this tenant configuration.",
+          "type": "Boolean",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "appQms",
+          "description": "Whether the QMS application is enabled for this tenant configuration.",
+          "type": "Boolean",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "siteId",
+          "description": "External ERP facility/location/plant/site identifier mapped to this tenant configuration.",
+          "type": "String",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "enterpriseId",
+          "description": "External ERP subsidiary/entitiy/company identifier mapped to this tenant configuration.",
+          "type": "String",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "additionalDefinitions",
+          "description": "Additional definitions that can be used as defaults in integration if required",
+          "type": "JSON",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "tenantId",
+          "description": "Identifier of the tenant this configuration belongs to. This should be exact tenantId of the tenant",
+          "type": "String",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "integrationConfigurations",
+          "description": "",
+          "type": "[IntegrationConfiguration!]!",
+          "metadata": {
+            "mfgx": {
+              "relation": {
+                "fields": {
+                  "from": "id",
+                  "to": "integrationTypeId"
+                }
+              },
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        }
+      ],
+      "description": "Count of maximum number of records in one request"
+    },
+    "dataModelTypeId": "setup"
+  },
+  "migration": "{ \n  \"siteId\": erpFacilityId,\n  \"enterpriseId\": erpSubsidiaryId\n}",
+  "migrations": [
+    {
+      "dataModelVersionId": "cmraon0pl016d016t2c2k7ypd",
+      "dataModelVersion": {
+        "number": "6"
+      },
+      "mappingExpression": "{ \n  \"siteId\": erpFacilityId,\n  \"enterpriseId\": erpSubsidiaryId\n}"
+    },
+    {
+      "dataModelVersionId": "cmqou92f9030z017hchoh1b44",
+      "dataModelVersion": {
+        "number": "5"
+      },
+      "mappingExpression": "{\n  \"fuuzApps\": false,\n  \"connectionId\": $isNilOrEmpty($after.connectionId) ? \"fuuzMes\" : $after.connectionId\n}"
+    },
+    {
+      "dataModelVersionId": "cmcvwkspe00mr0166h2p68hde",
+      "dataModelVersion": {
+        "number": "4"
+      },
+      "mappingExpression": "$"
+    }
+  ]
+}

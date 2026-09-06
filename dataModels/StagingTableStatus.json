@@ -1,0 +1,321 @@
+{
+  "header": {
+    "id": "stagingTableStatus",
+    "name": "StagingTableStatus",
+    "description": "",
+    "dataModelKindId": "reference",
+    "_customFields": {
+      "_externalId": null
+    }
+  },
+  "version": {
+    "id": "cmq9ectz8000k013s0q4m0qc1",
+    "number": "5",
+    "dataModelId": "stagingTableStatus",
+    "modelDefinition": {
+      "name": "StagingTableStatus",
+      "metadata": {
+        "mfgx": {
+          "module": {
+            "id": "integration",
+            "group": {
+              "id": "system"
+            }
+          },
+          "exposed": true,
+          "mutable": true,
+          "mutations": {
+            "create": true,
+            "update": true,
+            "del": true
+          },
+          "dataChangeCapture": {
+            "exposed": true,
+            "retentionDays": 120
+          },
+          "labelField": "name",
+          "editor": {
+            "autosort": false
+          },
+          "customFields": {
+            "exposed": true
+          }
+        },
+        "mongo": {
+          "collection": "stagingTableStatus"
+        },
+        "graphql": {
+          "type": "Object"
+        }
+      },
+      "kind": "Reference",
+      "fields": [
+        {
+          "name": "id",
+          "type": "ID!",
+          "description": "The primary unique ID of the record.  Every model should have an id field.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": false
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": true
+          }
+        },
+        {
+          "name": "name",
+          "type": "String",
+          "description": "Display name of the status, used as the record's label.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "new",
+          "type": "Boolean",
+          "description": "Flag marking this status as the initial 'new / not yet processed' state.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "inProcess",
+          "type": "Boolean",
+          "description": "Flag marking records currently being processed.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "processed",
+          "type": "Boolean",
+          "description": "Flag marking records that have finished processing, regardless of outcome, a step after the successful integration",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "success",
+          "type": "Boolean",
+          "description": "Flag marking successful integration completion.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "failure",
+          "type": "Boolean",
+          "description": "Flag marking failed processing.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "autoRetry",
+          "type": "Boolean",
+          "description": "Flag indicating records in this status should be automatically retried.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "integrationStagings",
+          "description": "",
+          "type": "[IntegrationStaging!]!",
+          "metadata": {
+            "mfgx": {
+              "relation": {
+                "fields": {
+                  "from": "id",
+                  "to": "statusId"
+                }
+              },
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "color",
+          "type": "Color",
+          "description": "Display color used to visually represent the status in the UI.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        }
+      ],
+      "description": ""
+    },
+    "dataModelTypeId": "setup"
+  },
+  "migration": "{ \n  \"color\": color\n}",
+  "migrations": [
+    {
+      "dataModelVersionId": "cmq9ectz8000k013s0q4m0qc1",
+      "dataModelVersion": {
+        "number": "5"
+      },
+      "mappingExpression": "{ \n  \"color\": color\n}"
+    },
+    {
+      "dataModelVersionId": "cmd8nvbiz07np015v4brj96sx",
+      "dataModelVersion": {
+        "number": "4"
+      },
+      "mappingExpression": "$"
+    }
+  ]
+}

@@ -1,0 +1,310 @@
+{
+  "header": {
+    "id": "integrationMessage",
+    "name": "IntegrationMessage",
+    "description": "",
+    "dataModelKindId": "reference",
+    "_customFields": {
+      "_externalId": null
+    }
+  },
+  "version": {
+    "id": "cmnrd42wb04xn019o0wj85xs6",
+    "number": "9",
+    "dataModelId": "integrationMessage",
+    "modelDefinition": {
+      "name": "IntegrationMessage",
+      "metadata": {
+        "mfgx": {
+          "module": {
+            "id": "integration",
+            "group": {
+              "id": "system"
+            }
+          },
+          "exposed": true,
+          "mutable": true,
+          "mutations": {
+            "create": true,
+            "update": true,
+            "del": true
+          },
+          "dataChangeCapture": {
+            "exposed": true,
+            "retentionDays": 120
+          },
+          "editor": {
+            "autosort": true
+          },
+          "labelField": "number",
+          "customFields": {
+            "exposed": true
+          },
+          "indices": [
+            {
+              "name": "createdAtTTL",
+              "unique": false,
+              "ttl": 15778476,
+              "fields": [
+                "createdAt"
+              ]
+            }
+          ]
+        },
+        "mongo": {
+          "collection": "integrationMessage"
+        },
+        "graphql": {
+          "type": "Object"
+        }
+      },
+      "kind": "Reference",
+      "fields": [
+        {
+          "name": "id",
+          "type": "ID!",
+          "description": "The primary unique ID of the record.  Every model should have an id field.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": false
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": true
+          }
+        },
+        {
+          "name": "number",
+          "type": "String!",
+          "description": "",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              },
+              "sequence": {
+                "id": "integrationMessageNumber"
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "global",
+          "type": "Boolean!",
+          "description": "",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              },
+              "defaultValue": false
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "message",
+          "type": "String",
+          "description": "",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "data",
+          "type": "JSON",
+          "description": "",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "typeId",
+          "type": "ID!",
+          "description": "",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "integrationStagingId",
+          "type": "ID",
+          "description": "",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "integrationStaging",
+          "description": "",
+          "type": "IntegrationStaging",
+          "metadata": {
+            "mfgx": {
+              "relation": {
+                "fields": {
+                  "from": "integrationStagingId",
+                  "to": "id"
+                }
+              },
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "type",
+          "description": "",
+          "type": "IntegrationMessageType",
+          "metadata": {
+            "mfgx": {
+              "relation": {
+                "fields": {
+                  "from": "typeId",
+                  "to": "id"
+                }
+              },
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        }
+      ],
+      "description": ""
+    },
+    "dataModelTypeId": "transactional"
+  },
+  "migration": "$",
+  "migrations": [
+    {
+      "dataModelVersionId": "cmnrd42wb04xn019o0wj85xs6",
+      "dataModelVersion": {
+        "number": "9"
+      },
+      "mappingExpression": "$"
+    }
+  ]
+}

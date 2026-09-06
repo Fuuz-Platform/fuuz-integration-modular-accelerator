@@ -1,0 +1,1045 @@
+{
+  "header": {
+    "id": "manageIntegrationType",
+    "name": "Manage Integration Type ",
+    "description": "Screen to add/edit integration type record",
+    "active": true,
+    "moduleId": "integration",
+    "substitutesScreenId": null,
+    "isWidget": true,
+    "_customFields": {
+      "_externalId": null
+    }
+  },
+  "version": {
+    "id": "cmrap0htd01am015e3f3t35m1",
+    "number": "0.0.7",
+    "description": "- Updated site Id and Enterprise ID mapping instead of facility Id and subsidiary Id",
+    "screenId": "manageIntegrationType",
+    "design": {
+      "components": [
+        {
+          "name": "New Screen",
+          "tabTitle": "New Tab",
+          "type": "canvas",
+          "props": {
+            "design": {
+              "ROOT": {
+                "type": {
+                  "resolvedName": "Screen"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexDirection": "column",
+                  "flexWrap": false,
+                  "alignItems": "stretch",
+                  "justifyContent": "flex-start",
+                  "width": "100%",
+                  "height": "100%",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "flowsDelay": 0,
+                  "removeOuterMargin": false
+                },
+                "displayName": "Screen",
+                "custom": {
+                  "elementName": "Screen",
+                  "elementCounts": {
+                    "Container": 4,
+                    "Form": 1,
+                    "Text": 5,
+                    "Switch": 1,
+                    "Integer": 3,
+                    "Checkbox": 4,
+                    "JSON": 1,
+                    "JSONata": 1,
+                    "Button Group": 1,
+                    "Action": 5,
+                    "Select": 1
+                  }
+                },
+                "parent": null,
+                "hidden": false,
+                "nodes": [
+                  "Q92aQZibmU"
+                ],
+                "linkedNodes": {}
+              },
+              "Q92aQZibmU": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": true,
+                  "flexDirection": "column",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "auto",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {}
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container1"
+                },
+                "parent": "ROOT",
+                "hidden": false,
+                "nodes": [
+                  "ZoxLYrOzhY"
+                ],
+                "linkedNodes": {}
+              },
+              "ZoxLYrOzhY": {
+                "type": {
+                  "resolvedName": "Form"
+                },
+                "isCanvas": true,
+                "props": {
+                  "query": {
+                    "api": "Application",
+                    "query": null,
+                    "dataPath": "edges[0]",
+                    "dataTransform": {
+                      "transform": "(\n  $data := edges.node;\n  $metadata.urlParameters.mode = \"Add\" ? {\"title\": \"Add Integration type\",\"fuuzApps\": false} :\n  $merge([$data,{\"title\": \"Update Integration type \" & $data.integrationName,\"fuuzApps\": $coalesce([$data.fuuzApps, false])}])\n)",
+                      "remote": false
+                    },
+                    "dataSubscription": {
+                      "enabled": false
+                    },
+                    "autoLoad": true,
+                    "parameters": "{\n  \"filter\": {\n    \"id\": {\n      \"_eq\": id\n    }\n  },\n  \"first\": 1\n}",
+                    "fields": [
+                      "id",
+                      "connectionId"
+                    ],
+                    "disableDataChangeIndicator": false,
+                    "dataChangeIndicatorSize": "normal",
+                    "model": "IntegrationType"
+                  },
+                  "blockNavigationWhenDirty": true,
+                  "enableConfirmOnDataChanged": false,
+                  "description": "Count of maximum number of records in one request"
+                },
+                "displayName": "Form",
+                "custom": {
+                  "elementName": "Form1"
+                },
+                "parent": "Q92aQZibmU",
+                "hidden": false,
+                "nodes": [
+                  "k7wzgCApgI"
+                ],
+                "linkedNodes": {}
+              },
+              "k7wzgCApgI": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 8,
+                  "margin": 8,
+                  "flexWrap": true,
+                  "flexDirection": "row",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "100%",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": true,
+                  "borderRadius": 4,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {},
+                  "background": "paper"
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container2"
+                },
+                "parent": "ZoxLYrOzhY",
+                "hidden": false,
+                "nodes": [
+                  "iBhZ_DGNUw",
+                  "54e9Q0YOLC",
+                  "r5qXdufxAx",
+                  "ofxHKutPsU",
+                  "ek0-0tldxt",
+                  "FLzqk0k7ne",
+                  "UeNi_g0hjq",
+                  "yKXveH8LOa",
+                  "E28x1U5L-t",
+                  "j01c9MpB7T"
+                ],
+                "linkedNodes": {}
+              },
+              "iBhZ_DGNUw": {
+                "type": {
+                  "resolvedName": "DisplayText"
+                },
+                "isCanvas": false,
+                "props": {
+                  "padding": 8,
+                  "width": "100%",
+                  "height": "auto",
+                  "validation": {
+                    "required": false
+                  },
+                  "uniqueValidationEnabled": false,
+                  "visible": true,
+                  "type": "display",
+                  "label": "Text",
+                  "justifyContent": "start",
+                  "alignTextItems": "center",
+                  "labelFontSize": "body1",
+                  "fontSize": "h4",
+                  "target": {
+                    "dataPath": null
+                  },
+                  "dataPath": "title",
+                  "formElement": "Form1",
+                  "labelPosition": {
+                    "id": "null",
+                    "label": "None"
+                  },
+                  "query": {
+                    "fields": []
+                  }
+                },
+                "displayName": "Text",
+                "custom": {
+                  "elementName": "Text1"
+                },
+                "parent": "k7wzgCApgI",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "54e9Q0YOLC": {
+                "type": {
+                  "resolvedName": "TextInput"
+                },
+                "isCanvas": false,
+                "props": {
+                  "padding": 8,
+                  "width": "100%",
+                  "height": "auto",
+                  "validation": {
+                    "required": true
+                  },
+                  "uniqueValidationEnabled": false,
+                  "visible": true,
+                  "type": "text",
+                  "label": "Integration Name",
+                  "variant": "standard",
+                  "dataPath": "integrationName",
+                  "description": "",
+                  "field": "integrationName",
+                  "target": {
+                    "dataPath": null
+                  },
+                  "formElement": "Form1",
+                  "disabled": {
+                    "__transform": "$metadata.urlParameters.mode = \"Edit\"",
+                    "__dynamicFields": {
+                      "payload": null,
+                      "context": []
+                    },
+                    "__cacheKey": "",
+                    "__remote": false
+                  }
+                },
+                "displayName": "Text",
+                "custom": {
+                  "elementName": "Text2"
+                },
+                "parent": "k7wzgCApgI",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "ofxHKutPsU": {
+                "type": {
+                  "resolvedName": "Switch"
+                },
+                "isCanvas": false,
+                "props": {
+                  "padding": 8,
+                  "width": "100%",
+                  "height": "auto",
+                  "validation": {
+                    "required": true
+                  },
+                  "uniqueValidationEnabled": false,
+                  "visible": true,
+                  "type": "switch",
+                  "label": "Fuuz Apps",
+                  "dataPath": "fuuzApps",
+                  "field": "fuuzApps",
+                  "target": {
+                    "dataPath": null
+                  },
+                  "formElement": "Form1",
+                  "labelLeft": "External System"
+                },
+                "displayName": "Switch",
+                "custom": {
+                  "elementName": "Switch1"
+                },
+                "parent": "k7wzgCApgI",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "ek0-0tldxt": {
+                "type": {
+                  "resolvedName": "IntegerInput"
+                },
+                "isCanvas": false,
+                "props": {
+                  "padding": 8,
+                  "width": "33%",
+                  "height": "auto",
+                  "validation": {
+                    "disallowNegative": false,
+                    "disallowDecimals": false
+                  },
+                  "uniqueValidationEnabled": false,
+                  "visible": {
+                    "__transform": "$components.Form1.data.fuuzApps = false",
+                    "__dynamicFields": {
+                      "payload": null,
+                      "context": [
+                        "components.Form1.data.fuuzApps"
+                      ]
+                    },
+                    "__cacheKey": "fuuzApps",
+                    "__remote": false
+                  },
+                  "type": "integer",
+                  "label": "Concurrency Limit",
+                  "variant": "standard",
+                  "formElement": "Form1",
+                  "dataPath": "concurrencyLimit",
+                  "description": "Number of simultaneous request allowed",
+                  "field": "concurrencyLimit",
+                  "target": {
+                    "dataPath": null
+                  }
+                },
+                "displayName": "Integer",
+                "custom": {
+                  "elementName": "Integer1"
+                },
+                "parent": "k7wzgCApgI",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "FLzqk0k7ne": {
+                "type": {
+                  "resolvedName": "IntegerInput"
+                },
+                "isCanvas": false,
+                "props": {
+                  "padding": 8,
+                  "width": "33%",
+                  "height": "auto",
+                  "validation": {
+                    "disallowNegative": false,
+                    "disallowDecimals": false
+                  },
+                  "uniqueValidationEnabled": false,
+                  "visible": {
+                    "__transform": "$components.Form1.data.fuuzApps = false",
+                    "__dynamicFields": {
+                      "context": [
+                        "components.Form1.data.fuuzApps"
+                      ]
+                    },
+                    "__cacheKey": "fuuzApps",
+                    "__remote": false
+                  },
+                  "type": "integer",
+                  "label": "Max Records Limit",
+                  "variant": "standard",
+                  "formElement": "Form1",
+                  "dataPath": "maxRecordsLimit",
+                  "description": "Count of maximum number of processed in a request",
+                  "field": "maxRecordsLimit",
+                  "target": {
+                    "dataPath": null
+                  }
+                },
+                "displayName": "Integer",
+                "custom": {
+                  "elementName": "Integer2"
+                },
+                "parent": "k7wzgCApgI",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "UeNi_g0hjq": {
+                "type": {
+                  "resolvedName": "IntegerInput"
+                },
+                "isCanvas": false,
+                "props": {
+                  "padding": 8,
+                  "width": "33%",
+                  "height": "auto",
+                  "validation": {
+                    "disallowNegative": false,
+                    "disallowDecimals": false
+                  },
+                  "uniqueValidationEnabled": false,
+                  "visible": {
+                    "__transform": "$components.Form1.data.fuuzApps = false",
+                    "__dynamicFields": {
+                      "context": [
+                        "components.Form1.data.fuuzApps"
+                      ]
+                    },
+                    "__cacheKey": "fuuzApps",
+                    "__remote": false
+                  },
+                  "type": "integer",
+                  "label": "Request Interval",
+                  "variant": "standard",
+                  "formElement": "Form1",
+                  "dataPath": "requestInterval",
+                  "description": "Time inteval between requests in milliSeconds if applicable\n\n",
+                  "field": "requestInterval",
+                  "target": {
+                    "dataPath": null
+                  }
+                },
+                "displayName": "Integer",
+                "custom": {
+                  "elementName": "Integer3"
+                },
+                "parent": "k7wzgCApgI",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "5CXDgwsO6d": {
+                "type": {
+                  "resolvedName": "Checkbox"
+                },
+                "isCanvas": false,
+                "props": {
+                  "padding": 8,
+                  "width": "25%",
+                  "height": "auto",
+                  "validation": {
+                    "required": true
+                  },
+                  "uniqueValidationEnabled": false,
+                  "visible": true,
+                  "type": "checkbox",
+                  "label": "MES App",
+                  "formElement": "Form1",
+                  "dataPath": "appMes",
+                  "field": "appMes",
+                  "target": {
+                    "dataPath": null
+                  },
+                  "onChange": "(\n$$.newValue = true ?\n($components.Form1.fn.setValue(\"appWms\", false);\n$components.Form1.fn.setValue(\"appCmms\", false);\n$components.Form1.fn.setValue(\"appQms\", false);)\n)"
+                },
+                "displayName": "Checkbox",
+                "custom": {
+                  "elementName": "Checkbox1"
+                },
+                "parent": "yKXveH8LOa",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "iQxOvrhb6P": {
+                "type": {
+                  "resolvedName": "Checkbox"
+                },
+                "isCanvas": false,
+                "props": {
+                  "padding": 8,
+                  "width": "25%",
+                  "height": "auto",
+                  "validation": {
+                    "required": true
+                  },
+                  "uniqueValidationEnabled": false,
+                  "visible": true,
+                  "type": "checkbox",
+                  "label": "WMS App",
+                  "formElement": "Form1",
+                  "dataPath": "appWms",
+                  "field": "appWms",
+                  "target": {
+                    "dataPath": null
+                  },
+                  "onChange": "(\n$$.newValue = true ?\n($components.Form1.fn.setValue(\"appMes\", false);\n$components.Form1.fn.setValue(\"appCmms\", false);\n$components.Form1.fn.setValue(\"appQms\", false);)\n)"
+                },
+                "displayName": "Checkbox",
+                "custom": {
+                  "elementName": "Checkbox2"
+                },
+                "parent": "yKXveH8LOa",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "2PSt9WP2fZ": {
+                "type": {
+                  "resolvedName": "Checkbox"
+                },
+                "isCanvas": false,
+                "props": {
+                  "padding": 8,
+                  "width": "25%",
+                  "height": "auto",
+                  "validation": {
+                    "required": true
+                  },
+                  "uniqueValidationEnabled": false,
+                  "visible": true,
+                  "type": "checkbox",
+                  "label": "CMMS App",
+                  "formElement": "Form1",
+                  "dataPath": "appCmms",
+                  "field": "appCmms",
+                  "target": {
+                    "dataPath": null
+                  },
+                  "onChange": "(\n$$.newValue = true ?\n($components.Form1.fn.setValue(\"appWms\", false);\n$components.Form1.fn.setValue(\"appMes\", false);\n$components.Form1.fn.setValue(\"appQms\", false);)\n)"
+                },
+                "displayName": "Checkbox",
+                "custom": {
+                  "elementName": "Checkbox3"
+                },
+                "parent": "yKXveH8LOa",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "hsuxOWrXSv": {
+                "type": {
+                  "resolvedName": "Checkbox"
+                },
+                "isCanvas": false,
+                "props": {
+                  "padding": 8,
+                  "width": "25%",
+                  "height": "auto",
+                  "validation": {
+                    "required": true
+                  },
+                  "uniqueValidationEnabled": false,
+                  "visible": true,
+                  "type": "checkbox",
+                  "label": "QMS App",
+                  "formElement": "Form1",
+                  "dataPath": "appQms",
+                  "field": "appQms",
+                  "target": {
+                    "dataPath": null
+                  },
+                  "onChange": "(\n$$.newValue = true ?\n($components.Form1.fn.setValue(\"appWms\", false);\n$components.Form1.fn.setValue(\"appCmms\", false);\n$components.Form1.fn.setValue(\"appMes\", false);)\n)"
+                },
+                "displayName": "Checkbox",
+                "custom": {
+                  "elementName": "Checkbox4"
+                },
+                "parent": "yKXveH8LOa",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "DlCVafexa2": {
+                "type": {
+                  "resolvedName": "TextInput"
+                },
+                "isCanvas": false,
+                "props": {
+                  "padding": 8,
+                  "width": "50%",
+                  "height": "auto",
+                  "validation": {
+                    "required": false
+                  },
+                  "uniqueValidationEnabled": false,
+                  "visible": true,
+                  "type": "text",
+                  "label": "Site ID",
+                  "variant": "standard",
+                  "formElement": "Form1",
+                  "dataPath": "siteId",
+                  "field": "siteId",
+                  "target": {
+                    "dataPath": null
+                  },
+                  "description": "External ERP facility/location/plant/site identifier mapped to this tenant configuration."
+                },
+                "displayName": "Text",
+                "custom": {
+                  "elementName": "Text3"
+                },
+                "parent": "yKXveH8LOa",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "prcfY_3UsV": {
+                "type": {
+                  "resolvedName": "TextInput"
+                },
+                "isCanvas": false,
+                "props": {
+                  "padding": 8,
+                  "width": "50%",
+                  "height": "auto",
+                  "validation": {
+                    "required": false
+                  },
+                  "uniqueValidationEnabled": false,
+                  "visible": true,
+                  "type": "text",
+                  "label": "Enterprise ID",
+                  "variant": "standard",
+                  "formElement": "Form1",
+                  "dataPath": "enterpriseId",
+                  "field": "enterpriseId",
+                  "target": {
+                    "dataPath": null
+                  },
+                  "description": "External ERP subsidiary/entitiy/company identifier mapped to this tenant configuration."
+                },
+                "displayName": "Text",
+                "custom": {
+                  "elementName": "Text4"
+                },
+                "parent": "yKXveH8LOa",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "5dG79ss4XI": {
+                "type": {
+                  "resolvedName": "TextInput"
+                },
+                "isCanvas": false,
+                "props": {
+                  "padding": 8,
+                  "width": "100%",
+                  "height": "auto",
+                  "validation": {
+                    "required": true
+                  },
+                  "uniqueValidationEnabled": false,
+                  "visible": true,
+                  "type": "text",
+                  "label": "Tenant ID",
+                  "variant": "standard",
+                  "dataPath": "tenantId",
+                  "field": "tenantId",
+                  "target": {
+                    "dataPath": null
+                  },
+                  "formElement": "Form1"
+                },
+                "displayName": "Text",
+                "custom": {
+                  "elementName": "Text5"
+                },
+                "parent": "yKXveH8LOa",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "E28x1U5L-t": {
+                "type": {
+                  "resolvedName": "JSONInput"
+                },
+                "isCanvas": false,
+                "props": {
+                  "padding": 8,
+                  "width": "100%",
+                  "height": "auto",
+                  "validation": {
+                    "required": false
+                  },
+                  "uniqueValidationEnabled": false,
+                  "visible": true,
+                  "type": "json",
+                  "label": "Additional Definitions",
+                  "showEditor": true,
+                  "dataPath": "additionalDefinitions",
+                  "field": "additionalDefinitions",
+                  "target": {
+                    "dataPath": null
+                  },
+                  "formElement": "Form1"
+                },
+                "displayName": "JSON",
+                "custom": {
+                  "elementName": "Json1"
+                },
+                "parent": "k7wzgCApgI",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "j01c9MpB7T": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": true,
+                  "flexDirection": "row-reverse",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "auto",
+                  "hidden": false,
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {}
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container3"
+                },
+                "parent": "k7wzgCApgI",
+                "hidden": false,
+                "nodes": [
+                  "-J-ivAYV9b",
+                  "d93U5FPK1q",
+                  "Xp1ASjGjvu"
+                ],
+                "linkedNodes": {}
+              },
+              "-J-ivAYV9b": {
+                "type": {
+                  "resolvedName": "ActionButton"
+                },
+                "isCanvas": false,
+                "props": {
+                  "margin": 6,
+                  "buttonColor": "secondary",
+                  "width": "76px",
+                  "height": "48px",
+                  "disabled": false,
+                  "hidden": false,
+                  "useIconButton": false,
+                  "disableHover": false,
+                  "disableRipple": false,
+                  "action": [
+                    {
+                      "type": "transformation",
+                      "transformation": "$components.Screen.fn.return()"
+                    }
+                  ],
+                  "icon": {
+                    "icon": "xmark-large",
+                    "color": "inherit",
+                    "variant": "regular",
+                    "size": "icon"
+                  }
+                },
+                "displayName": "Action",
+                "custom": {
+                  "elementName": "Action3"
+                },
+                "parent": "j01c9MpB7T",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "r5qXdufxAx": {
+                "type": {
+                  "resolvedName": "SelectInput"
+                },
+                "isCanvas": false,
+                "props": {
+                  "padding": 8,
+                  "width": "100%",
+                  "height": "auto",
+                  "validation": {
+                    "required": true
+                  },
+                  "uniqueValidationEnabled": false,
+                  "visible": true,
+                  "type": "select",
+                  "label": "Connection",
+                  "dialogMode": "never",
+                  "multiselect": false,
+                  "isClearable": true,
+                  "selectAll": true,
+                  "searchPredicate": "contains",
+                  "api": "Application",
+                  "stateTracking": "id",
+                  "optionLimit": 5,
+                  "optionLimitFlex": 5,
+                  "alwaysReloadOptions": false,
+                  "dataPath": "connectionId",
+                  "description": "",
+                  "field": "connection",
+                  "target": {
+                    "dataPath": null
+                  },
+                  "formElement": "Form1",
+                  "labelPath": "name",
+                  "orderByField": "name",
+                  "query": {
+                    "fields": []
+                  },
+                  "dataModel": "Connection",
+                  "selectFields": [
+                    "name"
+                  ],
+                  "additionalFields": [
+                    "name"
+                  ],
+                  "additionalFilter": {
+                    "_and": [
+                      {
+                        "active": {
+                          "_eq": true
+                        }
+                      }
+                    ]
+                  }
+                },
+                "displayName": "Select",
+                "custom": {
+                  "elementName": "Select1"
+                },
+                "parent": "k7wzgCApgI",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "yKXveH8LOa": {
+                "type": {
+                  "resolvedName": "Container"
+                },
+                "isCanvas": true,
+                "props": {
+                  "padding": 0,
+                  "margin": 0,
+                  "flexWrap": true,
+                  "flexDirection": "row",
+                  "justifyContent": "flex-start",
+                  "alignItems": "stretch",
+                  "width": "100%",
+                  "height": "auto",
+                  "hidden": {
+                    "__transform": "$components.Form1.data.fuuzApps = false",
+                    "__dynamicFields": {
+                      "context": [
+                        "components.Form1.data.fuuzApps"
+                      ]
+                    },
+                    "__cacheKey": "fuuzApps",
+                    "__remote": false
+                  },
+                  "flexGrow": false,
+                  "flexShrink": false,
+                  "shadow": false,
+                  "borderRadius": 0,
+                  "collapsible": false,
+                  "collapsedFooter": false,
+                  "collapsedSize": 0,
+                  "collapsedByDefault": false,
+                  "onClickTransform": false,
+                  "layout": "flex",
+                  "bordersInput": {},
+                  "justifyItems": "start",
+                  "style": {}
+                },
+                "displayName": "Container",
+                "custom": {
+                  "elementName": "Container4"
+                },
+                "parent": "k7wzgCApgI",
+                "hidden": false,
+                "nodes": [
+                  "5dG79ss4XI",
+                  "5CXDgwsO6d",
+                  "iQxOvrhb6P",
+                  "2PSt9WP2fZ",
+                  "hsuxOWrXSv",
+                  "prcfY_3UsV",
+                  "DlCVafexa2"
+                ],
+                "linkedNodes": {}
+              },
+              "d93U5FPK1q": {
+                "type": {
+                  "resolvedName": "ActionButton"
+                },
+                "isCanvas": false,
+                "props": {
+                  "margin": 6,
+                  "buttonColor": "primary",
+                  "width": "76px",
+                  "height": "48px",
+                  "disabled": false,
+                  "hidden": {
+                    "__transform": "$metadata.urlParameters.mode = \"Add\"",
+                    "__dynamicFields": {
+                      "payload": null,
+                      "context": []
+                    },
+                    "__cacheKey": "",
+                    "__remote": false
+                  },
+                  "useIconButton": false,
+                  "disableHover": false,
+                  "disableRipple": false,
+                  "action": [
+                    {
+                      "type": "mutation",
+                      "api": "Application",
+                      "mutation": "mutation UpdateIntegrationType($payload: [IntegrationTypeUpdatePayloadInput!]!) {\n  mutation: updateIntegrationType(payload: $payload) {\n    id\n  }\n}",
+                      "transforms": {
+                        "pre": "(\n  $data := $components.Form1.data;\n  $externalApp := $not($data.fuuzApps);\n  $formattedData := $externalApp ? $merge([$data,{\"tenantId\": null, \"appMes\": null, \"appWms\": null, \"appCmms\": null, \"appQms\": null}]) : $data;\n  {\n  \"payload\":$formattedData.{\n    \"where\": {\n      \"id\": id\n    },\n    \"update\": $omit($,[\"id\",\"integrationName\",\"title\"])\n  }\n}\n)",
+                        "post": "$components.Screen.fn.return()\n"
+                      },
+                      "message": {
+                        "__transform": "\"Integration Type \" & data.mutation.id & \" updated successfully.\""
+                      },
+                      "title": {
+                        "__transform": ""
+                      }
+                    }
+                  ],
+                  "icon": {
+                    "icon": "floppy-disk",
+                    "color": "inherit",
+                    "variant": "regular",
+                    "size": "icon"
+                  }
+                },
+                "displayName": "Action",
+                "custom": {
+                  "elementName": "Action4"
+                },
+                "parent": "j01c9MpB7T",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              },
+              "Xp1ASjGjvu": {
+                "type": {
+                  "resolvedName": "ActionButton"
+                },
+                "isCanvas": false,
+                "props": {
+                  "margin": 6,
+                  "buttonColor": "primary",
+                  "width": "76px",
+                  "height": "48px",
+                  "disabled": false,
+                  "hidden": {
+                    "__transform": "$metadata.urlParameters.mode = \"Edit\"",
+                    "__dynamicFields": {
+                      "payload": null,
+                      "context": []
+                    },
+                    "__cacheKey": "",
+                    "__remote": false
+                  },
+                  "useIconButton": false,
+                  "disableHover": false,
+                  "disableRipple": false,
+                  "action": [
+                    {
+                      "type": "mutation",
+                      "api": "Application",
+                      "mutation": "mutation CreateIntegrationType($payload: [IntegrationTypeCreatePayloadInput!]!) {\n  mutation: createIntegrationType(payload: $payload) {\n    id\n  }\n}",
+                      "transforms": {
+                        "pre": "(\n  $data := $components.Form1.data;\n  $externalApp := $not($data.fuuzApps);\n  $formattedData := $externalApp ? $merge([$data,{\"tenantId\": null, \"appMes\": null, \"appWms\": null, \"appCmms\": null, \"appQms\": null}]) : $data;\n  {\n  \"payload\": {\n    \"create\": $omit($formattedData,\"title\")\n  }\n}\n)",
+                        "post": "$components.Screen.fn.return()"
+                      },
+                      "message": {
+                        "__transform": "\"Integration Type \" & data.id & \" created successfully.\""
+                      }
+                    }
+                  ],
+                  "icon": {
+                    "icon": "plus",
+                    "color": "inherit",
+                    "variant": "regular",
+                    "size": "icon"
+                  }
+                },
+                "displayName": "Action",
+                "custom": {
+                  "elementName": "Action5"
+                },
+                "parent": "j01c9MpB7T",
+                "hidden": false,
+                "nodes": [],
+                "linkedNodes": {}
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "routes": [
+    {
+      "id": "cmqp5736p004n01br0kl090wm",
+      "title": "Manage Integration Type ",
+      "path": "/system/integration/manageIntegrationType",
+      "moduleId": "integration",
+      "screenId": "manageIntegrationType",
+      "isMenuAccessible": false,
+      "submenu": ""
+    }
+  ]
+}

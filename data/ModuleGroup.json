@@ -1,0 +1,16 @@
+{
+  "api": "application",
+  "modelName": "ModuleGroup",
+  "payload": [
+    {
+      "id": "system",
+      "name": "System",
+      "icon": "cog",
+      "description": "Funcitonality that affects behavior system-wide, such as access control, integration, and business intelligence.",
+      "_customFields": {
+        "_externalId": null
+      }
+    }
+  ],
+  "metadata": {}
+}

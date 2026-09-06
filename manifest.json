@@ -1,0 +1,10 @@
+{
+  "name": "Integration Orchestrator",
+  "version": "0.0.9",
+  "applicationPublisherId": null,
+  "enterpriseId": "appdev",
+  "environmentId": "build",
+  "dependencies": {},
+  "specVersion": "2.0.0",
+  "platformVersion": "2026.7.0"
+}

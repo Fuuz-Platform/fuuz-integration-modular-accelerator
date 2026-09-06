@@ -1,0 +1,589 @@
+{
+  "header": {
+    "id": "integrationStaging",
+    "name": "IntegrationStaging",
+    "description": "",
+    "dataModelKindId": "reference",
+    "_customFields": {
+      "_externalId": null
+    }
+  },
+  "version": {
+    "id": "cmqougszi039k015x1pzo2dop",
+    "number": "8",
+    "dataModelId": "integrationStaging",
+    "modelDefinition": {
+      "name": "IntegrationStaging",
+      "metadata": {
+        "mfgx": {
+          "module": {
+            "id": "integration",
+            "group": {
+              "id": "system"
+            }
+          },
+          "exposed": true,
+          "mutable": true,
+          "mutations": {
+            "create": true,
+            "update": true,
+            "del": true
+          },
+          "dataChangeCapture": {
+            "exposed": true,
+            "retentionDays": 120
+          },
+          "customFields": {
+            "exposed": true
+          },
+          "editor": {
+            "autosort": false
+          },
+          "indices": [
+            {
+              "name": "outboundRecordReference",
+              "unique": false,
+              "fields": [
+                "outboundRecordReference"
+              ]
+            },
+            {
+              "name": "createAtTTL",
+              "unique": false,
+              "ttl": 15778476,
+              "fields": [
+                "createdAt"
+              ]
+            }
+          ]
+        },
+        "mongo": {
+          "collection": "integrationStaging"
+        },
+        "graphql": {
+          "type": "Object"
+        }
+      },
+      "kind": "Reference",
+      "fields": [
+        {
+          "name": "id",
+          "type": "ID!",
+          "description": "The primary unique ID of the record.  Every model should have an id field.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": false
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": true
+          }
+        },
+        {
+          "name": "attemptCount",
+          "type": "Int",
+          "description": "Number of processing attempts made for this staging record, used for retry logic.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "appPostError",
+          "type": "Boolean",
+          "description": "Whether an error occurred while posting this record to the target applications.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "number",
+          "type": "String!",
+          "description": "Auto-generated sequence number identifying the staging record.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              },
+              "sequence": {
+                "id": "integrationStagingNumber"
+              }
+            },
+            "unique": true
+          }
+        },
+        {
+          "name": "internalRecordReference",
+          "type": "String",
+          "description": "Reference field to store internal record identifier such as number",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "externalRecordReference",
+          "description": "Reference field to store internal record identifier such as number",
+          "type": "String",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "outboundRecordReference",
+          "type": "String",
+          "description": "Reference identifier of the outbound transaction to verify the uniqueness of the transaction and avoid processing same record more than once.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "appPostedAt",
+          "type": "DateTime",
+          "description": "Timestamp when the record was successfully posted to the target application.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "processedAt",
+          "type": "DateTime",
+          "description": "Integration to external system completion timestamp",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "metadata",
+          "type": "JSON",
+          "description": "JSON metadata describing the staging record (context captured during processing).",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "request",
+          "type": "JSON",
+          "description": "JSON request payload sent to / received for processing.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "response",
+          "type": "JSON",
+          "description": "JSON response payload returned from processing.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "integrationConfigId",
+          "type": "ID!",
+          "description": "The IntegrationConfiguration that governs this record.",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "integrationConfig",
+          "description": "",
+          "type": "IntegrationConfiguration",
+          "metadata": {
+            "mfgx": {
+              "relation": {
+                "fields": {
+                  "from": "integrationConfigId",
+                  "to": "id"
+                }
+              },
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "statusId",
+          "type": "ID",
+          "description": "Status of the transaaction",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "status",
+          "description": "",
+          "type": "StagingTableStatus",
+          "metadata": {
+            "mfgx": {
+              "relation": {
+                "fields": {
+                  "from": "statusId",
+                  "to": "id"
+                }
+              },
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "integrationMessages",
+          "description": "",
+          "type": "[IntegrationMessage!]!",
+          "metadata": {
+            "mfgx": {
+              "relation": {
+                "fields": {
+                  "from": "id",
+                  "to": "integrationStagingId"
+                }
+              },
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "fileId",
+          "type": "ID",
+          "description": "Files",
+          "metadata": {
+            "mfgx": {
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        },
+        {
+          "name": "file",
+          "description": "",
+          "type": "File",
+          "metadata": {
+            "mfgx": {
+              "relation": {
+                "deletionReferenceBehavior": "prevent",
+                "fields": {
+                  "from": "fileId",
+                  "to": "id"
+                }
+              },
+              "mutations": {
+                "create": {
+                  "include": true
+                },
+                "update": {
+                  "include": true
+                }
+              },
+              "queries": {
+                "include": true
+              },
+              "where": {
+                "include": true
+              }
+            },
+            "unique": false
+          }
+        }
+      ],
+      "description": ""
+    },
+    "dataModelTypeId": "transactional"
+  },
+  "migration": "$",
+  "migrations": [
+    {
+      "dataModelVersionId": "cmqougszi039k015x1pzo2dop",
+      "dataModelVersion": {
+        "number": "8"
+      },
+      "mappingExpression": "$"
+    },
+    {
+      "dataModelVersionId": "cmqgt4ple00rd017p5ecl41l8",
+      "dataModelVersion": {
+        "number": "7"
+      },
+      "mappingExpression": "$"
+    },
+    {
+      "dataModelVersionId": "cmq9e2cn7064501724f2mch0f",
+      "dataModelVersion": {
+        "number": "6"
+      },
+      "mappingExpression": "$"
+    },
+    {
+      "dataModelVersionId": "cmo34xvd900yk015iekar75vp",
+      "dataModelVersion": {
+        "number": "5"
+      },
+      "mappingExpression": "$"
+    }
+  ]
+}
