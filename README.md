@@ -46,3 +46,9 @@ artifact.
 - [Technical Overview](docs/technical-overview.md) — what it is, how it is built, at a glance
 - [Setup & Configuration Guide](docs/setup-and-configuration.md) — step-by-step configuration in a tenant
 - [AS IS Build Reference](docs/as-is-build-reference.md) — architecture and functional-area map
+
+## Service levels
+
+No service level agreement applies to anything published here. It becomes a supported
+deliverable only once it has been implemented by a Fuuz services professional or an
+approved Fuuz partner.
